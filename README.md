@@ -70,6 +70,13 @@ Discuss what you need to develop this project. This includes background informat
             <img src="https://avatars.githubusercontent.com/u/91745125?v=4" width="100;" alt="bryanreiter"/>
             <br />
             <sub><b>Bryan Reiter</b></sub>
+        </a>    
+    </td>
+    <td align="center">
+        <a href="https://github.com/pdarsh58">
+            <img src="https://avatars.githubusercontent.com/u/93610569?v=4" width="100;" alt="pdarsh58"/>
+            <br />
+            <sub><b>Darshil Patel</b></sub>
         </a>
     </td>
    </tr>
