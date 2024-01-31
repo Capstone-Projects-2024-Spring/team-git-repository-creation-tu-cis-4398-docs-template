@@ -41,7 +41,6 @@ The smart home ASL integration aims to provide an inclusive and accessible home 
 - An interest to work with embedded systems
 - An interest to develop and create an accessible product
 - Python/Javascript backend knowledge
-Discuss what you need to develop this project. This includes background information you will need to acquire, hardware resources, and software resources. If these are not part of the standard Computer Science Department lab resources, these must be identified early and discussed with the instructor.
 
 ### Software Resources
 
