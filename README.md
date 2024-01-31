@@ -79,6 +79,13 @@ Discuss what you need to develop this project. This includes background informat
             <sub><b>Darshil Patel</b></sub>
         </a>
     </td>
+     <td align="center">
+        <a href="https://github.com/defining-art">
+            <img src="https://avatars.githubusercontent.com/u/118932320?v=4" width="100;" alt="oladapo"/>
+            <br />
+            <sub><b>Oladapo Oladele</b></sub>
+        </a>    
+    </td>
    </tr>
 </table>
 
