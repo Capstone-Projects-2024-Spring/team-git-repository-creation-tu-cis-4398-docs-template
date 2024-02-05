@@ -7,9 +7,13 @@ sidebar_position: 3
 - Smart Home Devices
 - Internet
 - Ethernet Connection
+- SD Card/SD Card Reader
 - Raspberry Pi 4
 - Raspberry Pi OS
+- Power Supply
+- Touch Display
 - Coral USB TPU
-- Display
 - ESP Microcontrollers
 - Cameras
+- Light Strips
+- Speakers
