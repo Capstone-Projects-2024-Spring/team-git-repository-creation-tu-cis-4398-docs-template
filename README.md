@@ -15,7 +15,7 @@ Section #, as well as any words that quickly give your peers insights into the a
 
 ## Project Abstract
 
-This document proposes a novel application of a text message (SMS or Email) read-out and hands-free call interacted between an Android Smartphone and an infotainment platform (headunit) in a car environment. When a phone receives an SMS or Email, the text message is transferred from the phone to the headunit through a Bluetooth connection. On the headunit, user can control which and when the received SMS or E-mail to be read out through the in-vehicle audio system. The user may press one button on the headunit to activate the hands-free feature to call back the SMS sender.
+This project aims to create a web application where users can input questions about Philadelphia and with OpenAI's API’s, translate the question into an SQL query. These queries will retrieve data from a number of distinct databases available through OpenDataPhilly, each accessible via Carto's SQL API. Databases include and are not limited to information on public safety, education, and real estate. The question to the user’s answer will then be displayed in an easy to read format, whether a simple sentence or table with a detailed map. The application's core functionality includes an interface for question input, a backend for query generation, execution, and displaying database responses for the user to understand. By integrating NLP with database management, this project seeks to provide data-driven answers to a wide array of queries about the city, ranging from demographic statistics to public service information
 
 ## High Level Requirement
 
@@ -23,7 +23,7 @@ Describe the requirements – i.e., what the product does and how it does it fro
 
 ## Conceptual Design
 
-Describe the initial design concept: Hardware/software architecture, programming language, operating system, etc.
+This project will have a web-based application architecture with respective frontend and a serverless backend. The frontend will be developed with Python Flask to create a responsive interface. On the serverless backend (AWS Lambda) we will need to use Python to connect to one of OpenAI’s API’s to generate SQL queries based on user prompts. We can use an AWS EC2 instance to host the frontend. The serverless backend will construct an HTTP request with the SQL query and send it to Carto’s SQL API. Carto's will then retrieve the requested information from the database that contains the requested information and return it in JSON format. The EC2 instance will then use the data to display the results in the front-end. Error handling will also need to be considered for any queries that do not produce valid results. 
 
 ## Background
 
