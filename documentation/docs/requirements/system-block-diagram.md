@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # System Block Diagram
 
-
+![alt text](PhillyGPT_BlockDiagram.png)
 
 #####Figure 1. High level design of PhillyGPT application.
 
