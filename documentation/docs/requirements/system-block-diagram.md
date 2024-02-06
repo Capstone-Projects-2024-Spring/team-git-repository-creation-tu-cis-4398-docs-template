@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ![alt text](PhillyGPT_BlockDiagram.png)
 
-#####Figure 1. High level design of PhillyGPT application.
+##### Figure 1. High level design of PhillyGPT application.
 
 Figure 1 depicts the high-level design of the application/website from a user's mobile device or laptop. They will be able to open the website (PhillyGPT) on their mobile device and will be able to enter a prompt. The front-end allowing the user to enter a prompt and view the results will be supported by the Flask Python Framework hosted on an AWS EC2 instance. There will be a AWS ELB load balancer distributing the load between EC2 instances in case of high website traffic. 
 
