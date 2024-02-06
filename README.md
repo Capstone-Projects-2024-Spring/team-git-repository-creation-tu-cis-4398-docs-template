@@ -11,27 +11,35 @@
 
 ## Keywords
 
-Section #, as well as any words that quickly give your peers insights into the application like programming language, development platform, type of application, etc.
+Section 02, Natural Language Processing, Databases, SQL, Node.js, Web Application, Python, Javascript, React, Philadelphia Public Data, OpenAI, SQL Query Generation
 
 ## Project Abstract
 
-This document proposes a novel application of a text message (SMS or Email) read-out and hands-free call interacted between an Android Smartphone and an infotainment platform (headunit) in a car environment. When a phone receives an SMS or Email, the text message is transferred from the phone to the headunit through a Bluetooth connection. On the headunit, user can control which and when the received SMS or E-mail to be read out through the in-vehicle audio system. The user may press one button on the headunit to activate the hands-free feature to call back the SMS sender.
+This project aims to create a web application that users can input questions about Philadelphia and with OpenAI's API’s, translate the question into an SQL query. These queries will retrieve data from a number of distinct databases available through OpenDataPhilly, each accessible via Carto's SQL API. The question to the user’s answer will then be displayed in an easy to read format, whether a simple sentence or table with a detailed map. The application's core functionality includes an interface for question input, a backend for query generation, execution, and displaying database responses. By integrating NLP with database management, this project seeks to provide data-driven answers to a wide array of queries about the city, ranging from demographic statistics to public service information.
 
 ## High Level Requirement
 
-Describe the requirements – i.e., what the product does and how it does it from a user point of view – at a high level.
+The product will allow users to input questions in natural language about various aspects of Philadelphia. The application will then translate these queries into SQL, fetch data from the relevant OpenDataPhilly databases, and present the results in a readable and engaging format. It will handle a broad range of query types, ensuring accuracy and relevance in the data presented.
 
 ## Conceptual Design
 
-Describe the initial design concept: Hardware/software architecture, programming language, operating system, etc.
+This project will have a web-based application architecture with respective frontend and backend technologies. The frontend will be developed with JavaScript, React, HTML, and Tailwind CSS to create a responsive interface. On the backend we will need to use Python to connect to one of OpenAI’s API’s to integrate natural language processing. The backend will also need Node.js. Cloud services will be needed. We can use an AWS EC2 instance to host the backend. The backend will construct an HTTP request with the SQL query and send it to Carto’s SQL API. The response from Carto will be parsed and formatted by the backend through one of OpenAI’s API’s again, and then presented to the user on the frontend. Error handling will also need to be considered for any queries that do not produce valid results.
 
 ## Background
 
-The background will contain a more detailed description of the product and a comparison to existing similar projects/products. A literature search should be conducted and the results listed. Proper citation of sources is required. If there are similar open-source products, you should state whether existing source will be used and to what extent. If there are similar closed-source/proprietary products, you should state how the proposed product will be similar and different.
+There is a project called San Francisco GPT. They also have another demo called Census GPT. Both of these projects utilize the respective datasets for their specific domains. Philly GPT will be a specialized adaptation of these projects using public datasets that pertain to Philadelphia. Philly GPT will not be a fork of the project, but will be simpler and light weight. As it is, San Francisco GPT and Census GPT do not run any user generated requests as the project may be abandoned. They only output pre-recorded responses.
 
 ## Required Resources
-
-Discuss what you need to develop this project. This includes background information you will need to acquire, hardware resources, and software resources. If these are not part of the standard Computer Science Department lab resources, these must be identified early and discussed with the instructor.
+- Python
+- JavaScript
+- Node.js
+- SQL
+- AWS EC2
+- React
+- OpenAI’s GPT-3.5 or GPT-4 API
+- HTML
+- CSS Tailwind
+- Carto’s SQL API
 
 ## Collaborators
 
@@ -39,24 +47,45 @@ Discuss what you need to develop this project. This includes background informat
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/ApplebaumIan">
-            <img src="https://avatars.githubusercontent.com/u/9451941?v=4" width="100;" alt="ApplebaumIan"/>
+        <a href="https://github.com/andrewto30">
+            <img src="https://avatars.githubusercontent.com/u/28883218?v=4" width="100;" alt="andrewto30"/>
             <br />
-            <sub><b>Ian Tyler Applebaum</b></sub>
+            <sub><b>Andrew To</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/leekd99">
-            <img src="https://avatars.githubusercontent.com/u/32583417?v=4" width="100;" alt="leekd99"/>
+        <a href="https://github.com/princegeutler">
+            <img src="https://avatars.githubusercontent.com/u/46353482?v=4" width="100;" alt="princegeutler"/>
             <br />
-            <sub><b>Kyle Dragon Lee</b></sub>
+            <sub><b>Prince Geutler</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/thanhnguyen46">
-            <img src="https://avatars.githubusercontent.com/u/60533187?v=4" width="100;" alt="thanhnguyen46"/>
+        <a href="https://github.com/alishahidd">
+            <img src="https://avatars.githubusercontent.com/u/76089708?v=4" width="100;" alt="alishahidd"/>
             <br />
-            <sub><b>Thanh Nguyen</b></sub>
+            <sub><b>Ali Shahid</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/zyij99">
+            <img src="https://avatars.githubusercontent.com/u/91389500?v=4" width="100;" alt="zyij99"/>
+            <br />
+            <sub><b>Brandon Zheng</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/tul58767">
+            <img src="https://avatars.githubusercontent.com/u/111989897?v=4" width="100;" alt="tul58767"/>
+            <br />
+            <sub><b>Quynh Cao</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/AidanScharnikow">
+            <img src="https://avatars.githubusercontent.com/u/111991905?v=4" width="100;" alt="AidanScharnikow"/>
+            <br />
+            <sub><b>Aidan Scharnikow</b></sub>
         </a>
     </td>
    </tr>
