@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Features and Requirements
 
-##Functional Requirements
+## Functional Requirements
 - User Input
     - Users will be able to input questions related to the city of Philadelphia and receive an accurate response.
     - Must utilize NLP via OpenAI GPT-3.5 or GPT-4 API
@@ -30,7 +30,7 @@ sidebar_position: 4
 - API Rate Limits
     - Must implment an API rate limits to prevent API abuse.
 
-##Nonfunctional Requirements
+## Nonfunctional Requirements
 - Ease of Navigation
     - The core functionality of the program must be easily accessible without extensive navigation.
 - Logging System
