@@ -15,7 +15,7 @@ An IntelliGest Home user is looking to switch lights on or off in different room
 
 ## Use Case 2
 
-On a Rainy day, a deaf/mute person is sitting on his couch in the basement and wondering if the weather is still bad weather.
+On a Rainy day, a Deaf person is sitting on his couch in the basement and wondering if the weather is still bad weather.
 1.	The user does certain gestures in front of the IntelliGest Camera
 2.	The user sees a certain light strip color and knows IntelliGest caught the Gesture
 3.	Then, the User sees a certain color and knows it is processing the request
@@ -23,7 +23,7 @@ On a Rainy day, a deaf/mute person is sitting on his couch in the basement and w
 
 ## Use Case 3
 
-A deaf/mute person is cooking dinner in the kitchen and wants to change the color of the kitchen’s light from brown to yellow
+A Deaf person is cooking dinner in the kitchen and wants to change the color of the kitchen’s light from brown to yellow
 1.	The user does certain Gestures in front of the IntelliGest Camera
 2.	The user sees a certain light strip color and knows IntelliGest caught the Gesture
 3.	Then, the User sees a certain color and knows it is processing the request
@@ -41,7 +41,7 @@ A brand new user is trying to set up a smart lock in their home to control.
 
 ## Use Case 5
 
-A Computer Science graduate deaf/mute person wants to add a new gesture to know the latest scores of their favorite NFL.
+A Computer Science graduate Deaf person wants to add a new gesture to know the latest scores of their favorite NFL.
 
 1.	User adds his Gesture to Google’s Teachable Machine
 2.	Links that Gesture to know the latest NFL scores 
@@ -51,7 +51,7 @@ A Computer Science graduate deaf/mute person wants to add a new gesture to know 
 
 ## Use Case 6
 
-A deaf/mute person wants to add ‘Buy a couple of Milk Gallons’ in his Reminders.
+A Deaf person wants to add ‘Buy a couple of Milk Gallons’ in his Reminders.
 
 1.	The user does certain Gestures in front of IntelliGest
 2.	The user sees certain lights and knows IntelliGest caught that request
@@ -72,7 +72,7 @@ A user wants to adjust their home temperature.
 
 ## Use Case 8 (May or may not be included in scope)
 
-Someone who is not deaf/mute wants to use IntelliGest
+Someone who is not Deaf wants to use IntelliGest
 1.	The user goes to his Account Settings and changes it to speak out responses
 2.	Then, the user says “Hey IntelliGest what’s the Top News”
 3.	The user sees certain lights and knows IntelliGest has received the request
