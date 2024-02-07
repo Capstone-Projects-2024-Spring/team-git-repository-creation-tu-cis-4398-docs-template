@@ -99,6 +99,13 @@ The smart home ASL integration aims to provide an inclusive and accessible home 
             <sub><b>Kevin Jarema</b></sub>
         </a>    
     </td>
+    <td align="center">
+        <a href="https://github.com/jzcodess">
+            <img src="https://avatars.githubusercontent.com/u/123217322?v=4" width="100;" alt="Jiajun Zhou"/>
+            <br />
+            <sub><b>Jiajun Zhou</b></sub>
+        </a>    
+    </td>
    </tr>
 </table>
 
