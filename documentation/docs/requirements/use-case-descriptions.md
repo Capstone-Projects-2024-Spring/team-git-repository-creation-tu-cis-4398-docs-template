@@ -1,7 +1,7 @@
 
 # Use Cases
 
-<h3>Use Case 1</h3>
+<h3>Use Case 1 - Number of Related Deaths</h3>
 
 A user wants to find out the number of covid deaths within Philadelphia.
 <ol>
@@ -11,7 +11,7 @@ A user wants to find out the number of covid deaths within Philadelphia.
 <li>Based on the users response they get results related to the covid deaths query.</li>
 <li>A table is displayed showing the statistics of covid related deaths within Philadelphia.</li>
 </ol>
-<h3>Use Case 2</h3>
+<h3>Use Case 2 - Heat Map of Crime</h3>
 
 A user wants to find view a heat map of violent crime within North Philadelphia and do further research based on the result
 <ol>
@@ -23,7 +23,7 @@ A user wants to find view a heat map of violent crime within North Philadelphia 
 <li>The website displays a heat map showing the number of violent crimes committed in North Philadelphia in 2022</li>
 </ol>
 
-<h3>Use Case 3</h3>
+<h3>Use Case 3 - Map of Crime</h3>
 
 Journalist writing paper on muggings in Philadelphia wants to know areas of high mugging concentration
 <ol>
@@ -34,7 +34,7 @@ Journalist writing paper on muggings in Philadelphia wants to know areas of high
 <li>After checking directly from the source, the Journalist is confident in the findings. </li>
 </ol>
 
-<h3>Use Case 4</h3>
+<h3>Use Case 4 - Transportation Information</h3>
 
 A student is researching public transportation in Philadelphia for a class project
 <ol>
@@ -43,7 +43,7 @@ A student is researching public transportation in Philadelphia for a class proje
 <li>The website provides the student with a detailed list of public transportation options, including bus routes, subway lines, and schedules.</li>
 </ol>
 
-<h3>Use Case 5</h3>
+<h3>Use Case 5 - Foot Traffic Identification</h3>
 
 A small business owner is considering opening a new restaurant in Philadelphia and want to identify the neighborhoods with the highest foot traffic
 <ol>
@@ -52,7 +52,7 @@ A small business owner is considering opening a new restaurant in Philadelphia a
 <li>Using this information, the business owner can make informed decisions about the location of his/her restaurant.</li>
 </ol>
 
-<h3>Use Case 6</h3>
+<h3>Use Case 6 - Location Analysis</h3>
 
 An urban planner wants to create a new green space in the city
 <ol>
@@ -61,7 +61,7 @@ An urban planner wants to create a new green space in the city
 <li>A table is shown that has relevant details about every green space such as their area and amenities.</li>
 </ol>
 
-<h3>Use Case 7</h3>
+<h3>Use Case 7 - Real Estate Analysis</h3>
 
 A real estate investor is looking for abandoned houses to buy and flip
 <ol>
@@ -72,7 +72,7 @@ A real estate investor is looking for abandoned houses to buy and flip
 <li>A response is returned with information such as the cost, square footage, and time its been vacant.</li>
 </ol>
 
-<h3>Use Case 8</h3>
+<h3>Use Case 8 - Leisure Activities</h3>
 
 Tourists are visiting Philadelphia and want to know about landmarks.
 <ol>
