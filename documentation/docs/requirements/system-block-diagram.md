@@ -3,11 +3,12 @@ sidebar_position: 2
 ---
 
 # System Block Diagram
+
 import Figure from "../../src/components/Figure";
 
 <Figure caption={"Figure 1. High-level design of the IntelliGest System application."}>
 
-![IntelliGest System Block Diagram](../../IntelliGestSystemDiagram.png)
+![IntelliGest System Block Diagram](../../static/img/IntelliGestSystemDiagram.png)
 
 </Figure>
 
