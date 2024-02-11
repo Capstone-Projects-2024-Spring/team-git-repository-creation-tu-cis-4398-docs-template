@@ -14,7 +14,7 @@ client = OpenAI(
 app = Flask(__name__)
 
 @app.route("/")
-def test():
+def index():
     return render_template("index.html")
         
 
