@@ -4,9 +4,9 @@ sidebar_position: 4
 
 # Features and Requirements
 
-##Functional Requirements
+## Functional Requirements
 - User Input
-    - Users will be able to input questions related to the city of Philadelphia and receive an accurate response.
+    - Users have the ability to input questions related to the city of Philadelphia and receive an accurate response.
     - Must utilize NLP via OpenAI GPT-3.5 or GPT-4 API
 
 - SQL Query Generation
@@ -16,7 +16,7 @@ sidebar_position: 4
     - Suggest user queries on the home page
 
 - Error Handling
-    - When the user response is not clear, give a "did you mean..." correction prompt.
+    - When the user response is not clear, give a retry prompt to get the correct database query.
     - When there are no results for the user's question, it must be reprompted.
 
 - User Interface
@@ -24,13 +24,13 @@ sidebar_position: 4
     - Ensure that user interface remains consistent regardless of the screen size.
     - User must be notified when the data is loading during fetching operations.
     - Result area must display the answers to the user's question and other data used to fetch from the API.
-        - SQL queries, Table queried
+    
 - Mapping
     - When a user asks a question, a map should appear and display the geographical data about their question.
 - API Rate Limits
-    - Must implment an API rate limits to prevent API abuse.
+    - Must implement an API rate limits to prevent API abuse.
 
-##Nonfunctional Requirements
+## Nonfunctional Requirements
 - Ease of Navigation
     - The core functionality of the program must be easily accessible without extensive navigation.
 - Logging System
