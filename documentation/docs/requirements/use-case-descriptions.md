@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Use-case descriptions
 
-## Use Case 1 ""
+## Use Case 1 "Light control through ASL Gestures"
 
 Scenario: David, an IntelliGest Home user, wants to switch lights on or off in different rooms using specific ASL/Gestures.
 Objective: As a user, I want to swtich lights on or off in different rooms using specific ASL/gestures, so I can easily manage my home's lighting. 
@@ -16,7 +16,7 @@ Objective: As a user, I want to swtich lights on or off in different rooms using
 5. Then, the light has been successfully turned on or off in different rooms. 
 
 
-## Use Case 2 ""
+## Use Case 2 "Weather seeking through Gestures"
 
 Scenario: On a Rainy day, Alex, a Deaf person, is sitting on his couch in the basement and wondering if the weather is still bad weather.
 Objective: As a Deaf user, I want to use gestures to seek about the weather, so I can easily obtain this information.
@@ -27,7 +27,7 @@ Objective: As a Deaf user, I want to use gestures to seek about the weather, so 
 4.	Finally, the User sees on the display the Weather for the rest of the day.
 
 
-## Use Case 3
+## Use Case 3 "Kitchen light color change"
 
 Scenario: One day, Jordan is cooking dinner in the kitchen and wants to change the kitchen's atmosphere by adjusting the light color.
 Objective: As a user, I want to change the color of my kitchen lights with gestures, so that would enhancing my cooking experience. 
@@ -38,7 +38,7 @@ Objective: As a user, I want to change the color of my kitchen lights with gestu
 4.	Finally, the User sees the kitchen light is changed to yellow by IntelliGest.
 
 
-## Use Case 4
+## Use Case 4 "Smart lock setup and control"
 
 Scenario: Sam, a brand new user, is trying to set up a smart lock in their home for security purpose.
 Objective: As a new user, I want to set up and control a smart lock with IntelliGest, ensuring my home's security.
@@ -50,7 +50,7 @@ Objective: As a new user, I want to set up and control a smart lock with Intelli
 5.	The user can now perform the action mapped to unlocking and locking.
 
 
-## Use Case 5
+## Use Case 5 "Custom Gesture for NFL Scores"
 
 Scenario: Taylor, A Computer Science graduate and Deaf person, wants to add a new gesture for the latest scores of their favorite NFL.
 Objective: As a sports enthusiast, I want to create a custom gesture to check NFL scores, so I will not miss out on any updates.
@@ -62,7 +62,7 @@ Objective: As a sports enthusiast, I want to create a custom gesture to check NF
 5.	Finally, they see the latest NFL scores on the display.
 
 
-## Use Case 6
+## Use Case 6 "Adding reminders through Gestures"
 
 Scenario: Morgan, a Deaf person, wants to add ‘Buy a couple of Milk Gallons’ in his Reminders.
 Objective: As a user, I want to add reminders using gestures, so it would be easier to manage tasks.
@@ -76,7 +76,7 @@ Objective: As a user, I want to add reminders using gestures, so it would be eas
 7.	Whenever he opens his Mobile Device, he will see ‘Buy a couple of Milk Gallons’ in his Reminders.
 
 
-## Use Case 7
+## Use Case 7 "Temperature adjustment with ASL"
 
 Scenario：Chris wants to adjust their home temperature.
 Objective: As a user, I want to adjust my home's temperature using ASL, so I can comfort with ease.
@@ -88,7 +88,7 @@ Objective: As a user, I want to adjust my home's temperature using ASL, so I can
 5. Finally, the temperature has been adjusted and the system provides visual confirmation on the display. 
 
 
-## Use Case 8 (May or may not be included in scope)
+## Use Case 8 (May or may not be included in scope) "Voice Commands in Standard mode"
 
 Scenario: Someone who is not Deaf wants to use IntelliGest.
 Objective: As a user, I want to switch IntelliGest to standard mode, accessing news and other functionalities vocally. 
