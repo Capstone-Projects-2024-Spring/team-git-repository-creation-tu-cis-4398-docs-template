@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ### Home Assistant
 
-Home Assistant acts as the server in our system. It receives commands from the user interface, interacts with the devices, and updates the user interface with the status of the devices.
+Home Assistant is the core of our system, acting as the server. It’s responsible for managing the state of all connected devices and automations. It communicates with the user interface to display device statuses. It also communicates with the IntelliGest system by receiving data payloads sent through an MQTT Broker which include a prediction for the action. It also interacts with the devices themselves to control their states based on user input and automation rules.
 
 ### User Interface
 
@@ -28,4 +28,69 @@ The TensorFlow Lite model, which has been trained to recognize ASL gestures, wil
 
 ### Javascript Custom Lovelace Cards
 
-These are custom cards that we will create for the Home Assistant dashboard to display ASL images. The cards will be written in JavaScript and will be used to enhance the user interface for our targeted demographic and provide necessary visual feedback when required.
+These are custom cards that we will create for the Home Assistant dashboard to display ASL images. The cards will be written in JavaScript and Home Assistant frontend development framework and will be used to enhance the user interface for our targeted demographic and provide necessary visual feedback when required.
+
+```mermaid
+---
+title: IntelliGest Home
+---
+
+classDiagram
+    HomeAssistant --|> UserInterface : sends commands and updates
+    HomeAssistant --|> Device : interacts with
+    HomeAssistant --|> PythonScripts : uses
+    UserInterface --|> JavaScriptCustomCards : uses
+    PythonScripts --|> Camera : captures image from
+    PythonScripts --|> TPU : loads model into
+    Camera --|> PythonScripts : sends image to
+    TPU --|> PythonScripts : sends prediction to
+    class HomeAssistant {
+        -devices[]
+        -automations[]
+        +add_device()
+        +remove_device()
+        +update_device_status()
+        +execute_automation()
+    }
+    class UserInterface {
+        -user_id
+        -command
+        -device_states[]
+        +send_command()
+        +display_device_state()
+    }
+    class Device {
+        -device_id
+        -device_type
+        -status
+        -capabilities[]
+        +update_status()
+        +execute_capability()
+    }
+    class PythonScripts {
+        -model
+        -interpreter
+        -image
+        -prediction
+        +load_model()
+        +capture_image()
+        +preprocess_image()
+        +make_prediction()
+    }
+    class JavaScriptCustomCards {
+        -card_id
+        -image
+        -display_state
+        +create_card()
+        +display_image()
+        +update_display_state()
+    }
+    class Camera {
+        -image
+        +capture_image()
+    }
+    class TPU {
+        -model
+        +load_model()
+        +make_prediction()
+    }
