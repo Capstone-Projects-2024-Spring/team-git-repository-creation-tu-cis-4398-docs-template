@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # Algorithms
 
+import Figure from "../../src/components/Figure";
+
 ## Algorithms for Hand Signal Detection
 
 ### Step 1: Continuous Motion Detection
@@ -12,7 +14,7 @@ The Raspberry Pi camera feed is monitored using OpenCV motion detection continua
 
 ### Step 2: Hand Isolation
 
-An OpenCV hand detection model is used to draw a box around the user’s hand. The hand will be cropped, then preprocessed for [Step 3](). If no hand is detected for 5 seconds, this process will cease and return to [Step 1](#step-1-continuous-motion-detection).
+An OpenCV hand detection model is used to draw a box around the user’s hand. The hand will be cropped, then preprocessed for [Step 3](#step-3-device-choice). If no hand is detected for 5 seconds, this process will cease and return to [Step 1](#step-1-continuous-motion-detection).
 
 ### Step 3: Device Choice
 
@@ -30,10 +32,11 @@ The image will be processed and input into a gesture recognition model to detect
 
 A user walks in front of the camera, the motion detection recognizes this and the process moves to the next step. The user signals an “O” with their thumb and index finger, and the hand detection captures the gesture given by the user and sends it to the ASL recognition model. The model identifies this as the gesture for the locks, and displays the smart lock status on the screen. The user intends to lock the smart locks, so they gesture a thumbs up to the camera. This is detected by the gesture recognition model, and the instruction to lock all smart locks is carried out. After this, the Raspberry Pi returns to its original state
 
-**ASL translator**: https://wecapable.com/tools/text-to-sign-language-converter/
+### Useful Resources
 
-**Hand detection model**: Based off this tutorial:
-https://www.analyticsvidhya.com/blog/2021/07/building-a-hand-tracking-system-using-opencv/
+[ASL Translator](https://wecapable.com/tools/text-to-sign-language-converter/)
+
+[Hand Detection Model Tutorial](https://www.analyticsvidhya.com/blog/2021/07/building-a-hand-tracking-system-using-opencv/)
 
 ## Model 2 Classes
 
