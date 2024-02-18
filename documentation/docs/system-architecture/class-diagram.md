@@ -30,6 +30,8 @@ The TensorFlow Lite model, which has been trained to recognize ASL gestures, wil
 
 These are custom cards that we will create for the Home Assistant dashboard to display ASL images. The cards will be written in JavaScript and Home Assistant frontend development framework and will be used to enhance the user interface for our targeted demographic and provide necessary visual feedback when required.
 
+## Class and Component Diagram
+
 ```mermaid
 ---
 title: IntelliGest Home
@@ -94,3 +96,4 @@ classDiagram
         +load_model()
         +make_prediction()
     }
+```
