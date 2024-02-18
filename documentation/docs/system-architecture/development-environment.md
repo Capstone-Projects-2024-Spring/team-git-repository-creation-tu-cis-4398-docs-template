@@ -16,7 +16,7 @@ Docker will be utilized to containerize both Home Assistant and a MQTT Broker se
 
 ### Image Detection Models
 
-Teachable Machine will be used to create a base model for hand gesture detection.
+Teachable Machine will be used to create a base model for hand gesture detection using Tensorflow Lite.
 
 OpenCV will be utilized for movement detection and hand isolation models.
 
@@ -33,6 +33,7 @@ OpenCV will be utilized for movement detection and hand isolation models.
 ### Langauges and Technologies
 
 - Python
+- JavaScript
 - YAML
 - OpenCV
 - MQTT Messaging Protocol
