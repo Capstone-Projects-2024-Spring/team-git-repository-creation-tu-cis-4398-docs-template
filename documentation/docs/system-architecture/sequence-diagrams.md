@@ -2,6 +2,8 @@
 sidebar_position: 3
 ---
 
+import Figure from "../../src/components/Figure";
+
 # Sequence Diagrams
 
 ## Use Case 1: Light Control through ASL Gestures
@@ -10,10 +12,7 @@ sidebar_position: 3
 
 ![Light Managment System](../../static/img/LightManagementSystem.png)
 
-</Figure>  
-<br>
-<br>
-
+</Figure>
 
 ## Use Case 2: Weather Seeking through Gestures
 
@@ -22,9 +21,6 @@ sidebar_position: 3
 ![Weather Seeking through Gestures](../../static/img/WeatherSeekingthroughGestures.png)
 
 </Figure>
-<br>
-<br>
-
 
 ## Use Case 3: Changing Kitchen Light Color
 
@@ -33,9 +29,6 @@ sidebar_position: 3
 ![Changing the Kitchen Light Color](../../static/img/ChangingKitchenLightColor.png)
 
 </Figure>
-<br>
-<br>
-
 
 ## Use Case 4: Smart Lock Setup and Control
 
@@ -44,9 +37,6 @@ sidebar_position: 3
 ![Smart Lock Setup and Control](../../static/img/Smartlocksetupandcontrol.png)
 
 </Figure>
-<br>
-<br>
-
 
 ## Use Case 5: Adding Reminders through Gestures
 
@@ -55,9 +45,6 @@ sidebar_position: 3
 ![Temperature Adjustment with ASL](../../static/img/AddingremindersthroughGestures.png)
 
 </Figure>
-<br>
-<br>
-
 
 ## Use Case 6: Temperature Adjustments with ASL
 
@@ -66,9 +53,6 @@ sidebar_position: 3
 ![Temperature Adjustment with ASL](../../static/img/TemperatureadjustmentwithASL.png)
 
 </Figure>
-<br>
-<br>
-
 
 ## Use Case 7: Changing TV Channels
 
@@ -77,21 +61,3 @@ sidebar_position: 3
 ![Changing Channels](../../static/img/ChangingChannels.png)
 
 </Figure>
-<br>
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
