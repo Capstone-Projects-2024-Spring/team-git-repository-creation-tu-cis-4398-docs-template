@@ -3,7 +3,7 @@
 
 <h3>Use Case 1 - Number of Related Deaths</h3>
 
-A health research wants to study affects of covid cases.
+A healthcare researcher wants to study affects of covid cases.
 <ol>
 <li>User loads the PhillyGPT website.</li>
 <li>User enters a prompt to ask the number of covid deaths.</li>
@@ -23,27 +23,27 @@ A user wants to find view a heat map of violent crime within North Philadelphia 
 <li>The website displays a heat map showing the number of violent crimes committed in North Philadelphia in 2022</li>
 </ol>
 
-<h3>Use Case 3 - Map of Crime</h3>
+<s><h3>Use Case 3 - Map of Crime</h3></s>
 
-Journalist writing paper on muggings in Philadelphia wants to know areas of high mugging concentration
-<ol>
-<li>Journalist goes to PhillyGPT website</li>
-<li>Journalist enters a prompt asking “Show me a map revealing information on muggings in Philadelphia”</li>
-<li>The journalist is shown a map and zooms in on Fishtown. </li>
-<li>The journalist wants to be sure the data provided is accurate so they click on a link that brings them to the database that was used to create the map</li>
-<li>After checking directly from the source, the Journalist is confident in the findings. </li>
-</ol>
+<s>Journalist writing paper on muggings in Philadelphia wants to know areas of high mugging concentration</s>
+<s><ol></s>
+<s><li>Journalist goes to PhillyGPT website</li></s>
+<s><li>Journalist enters a prompt asking “Show me a map revealing information on muggings in Philadelphia”</li></s>
+<s><li>The journalist is shown a map and zooms in on Fishtown. </li></s>
+<s><li>The journalist wants to be sure the data provided is accurate so they click on a link that brings them to the database that was used to create the map</li></s>
+<s><li>After checking directly from the source, the Journalist is confident in the findings. </li></s>
+<s></ol></s>
 
-<h3>Use Case 4 - Transportation Information</h3>
+<s><h3>Use Case 4 - Transportation Information</h3></s>
 
-A student is researching public transportation in Philadelphia for a class project
-<ol>
-<li>Student visits the PhillyGPT website</li>
-<li>Student enters a prompt asking for information on public transportation routes and schedules in Philadelphia</li>
-<li>The website provides the student with a detailed list of public transportation options, including bus routes, subway lines, and schedules.</li>
-</ol>
+<s>A student is researching public transportation in Philadelphia for a class project</s>
+<s><ol></s>
+<s><li>Student visits the PhillyGPT website</li></s>
+<s><li>Student enters a prompt asking for information on public transportation routes and schedules in Philadelphia</li></s>
+<s><li>The website provides the student with a detailed list of public transportation options, including bus routes, subway lines, and schedules.</li></s>
+<s></ol></s>
 
-<h3>Use Case 5 - Foot Traffic Identification</h3>
+<h3>Use Case 3 - Foot Traffic Identification</h3>
 
 A small business owner is considering opening a new restaurant in Philadelphia and want to identify the neighborhoods with the highest foot traffic
 <ol>
@@ -52,7 +52,7 @@ A small business owner is considering opening a new restaurant in Philadelphia a
 <li>Using this information, the business owner can make informed decisions about the location of his/her restaurant.</li>
 </ol>
 
-<h3>Use Case 6 - Location Analysis</h3>
+<h3>Use Case 4 - Location Analysis</h3>
 
 An urban planner wants to create a new green space in the city
 <ol>
@@ -61,7 +61,7 @@ An urban planner wants to create a new green space in the city
 <li>A table is shown that has relevant details about every green space such as their area and amenities.</li>
 </ol>
 
-<h3>Use Case 7 - Real Estate Analysis</h3>
+<h3>Use Case 5 - Real Estate Analysis</h3>
 
 A real estate investor is looking for abandoned houses to buy and flip
 <ol>
@@ -72,7 +72,7 @@ A real estate investor is looking for abandoned houses to buy and flip
 <li>A response is returned with information such as the cost, square footage, and time its been vacant.</li>
 </ol>
 
-<h3>Use Case 8 - Leisure Activities</h3>
+<h3>Use Case 6 - Leisure Activities</h3>
 
 Tourists are visiting Philadelphia and want to know about landmarks.
 <ol>
