@@ -45,27 +45,6 @@ Use Case 6
 ![Use Case 6](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/d028ff85-ba88-41f9-bdd0-24372f073add)
 
 
-
-
-
-
-
-
-
-**Requirements**
-
-In addition to the general requirements the Design Document - Part I Architecture will contain:
-
-A description the different components and their interfaces. For example: client, server, database.
-
-For each component provide class diagrams showing the classes to be developed (or used) and their relationship.
-
-Describe algorithms employed in your project, e.g. neural network paradigm, training and training data set, etc.
-
-If there is a database:
-
-Entity-relation diagram.
-
 Table design.
 
 A check list for architecture design is attached here [architecture\_design\_checklist.pdf](https://templeu.instructure.com/courses/106563/files/16928870/download?wrap=1 "architecture_design_checklist.pdf")  and should be used as a guidance.
