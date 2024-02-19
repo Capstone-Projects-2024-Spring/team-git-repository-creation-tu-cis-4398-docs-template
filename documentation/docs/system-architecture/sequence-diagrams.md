@@ -48,6 +48,40 @@ sidebar_position: 3
 <br>
 
 
+## Use Case 5: Adding Reminders through Gestures
+
+To be added
+
+<br>
+<br>
+
+
+## Use Case 6: Temperature Adjustment with ASL
+
+<Figure caption={"Use Case 6. Temperature Adjustment with ASL"}>
+
+![Temperature Adjustment with ASL](../../static/img/TemperatureadjustmentwithASL.png)
+
+</Figure>
+<br>
+<br>
+
+
+## Use Case 7: Changing Channels
+
+<Figure caption={"Use Case 7. Changing Channels"}>
+
+![Changing Channels](../../static/img/ChangingChannels.png)
+
+</Figure>
+<br>
+<br>
+
+
+
+
+
+
 
 
 
