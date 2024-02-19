@@ -37,6 +37,21 @@ sidebar_position: 3
 <br>
 
 
+## Use Case 4: Smart Lock Setup and Control
+
+<Figure caption={"Use Case 4. Smart lock setup and control"}>
+
+![Smart Lock Setup and Control](../../static/img/Smartlocksetupandcontrol.png)
+
+</Figure>
+<br>
+<br>
+
+
+
+
+
+
 
 
 
