@@ -7,6 +7,8 @@ sidebar_position: 1
 This document outlines the architecture for our web application, designed to convert natural language queries into SQL statements. Leveraging technologies like Node.js for the backend, Python for interfacing with OpenAI's ChatGPT, and other tools such as AWS Lambda and Carto's SQL API, our goal is to democratize access to database querying. This project aims to bridge the gap between complex data manipulation and user-friendly interactions, enabling users to engage with databases through conversational inputs. By detailing the system's structure and workflow, this document serves as a roadmap for the development team, ensuring clarity and coherence in our approach to creating a seamless, intuitive data querying experience.
 
 **Components and Interfaces**
+![alt text](PhillyGPT_BlockDiagram.png) 
+Current System Architecure Diagram (work in progress)
 - **Client-Side Web Application (Frontend)**
   - For PhillyGPT we will utilize a multitude of different components that will enhance our services providing a seamless experience for users. To create pages we will utilize HTML along with CSS Tailwind for styling. JavaScript will also be used to create dynamic interactions.
   The user interace will allow users to input natural language queries (prompts) which will then return a display of results based on the specific request. The frontend will communicate with the backend via HTTP requests.
