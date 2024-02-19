@@ -50,8 +50,11 @@ sidebar_position: 3
 
 ## Use Case 5: Adding Reminders through Gestures
 
-To be added
+<Figure caption={"Use Case 6. Adding Reminders through Gestures"}>
 
+![Temperature Adjustment with ASL](../../static/img/AddingremindersthroughGestures.png)
+
+</Figure>
 <br>
 <br>
 
