@@ -25,11 +25,23 @@ Current System Architecure Diagram (work in progress)
   - For geographical purposes PhillyGPT will utilize code that makes HTTP requests to Carto's SQL API for executing SQL queries on spatial data. API requests to Carto's SQL API endpoint will be made by passing SQL queries and receiving query results in JSON format.
 
 **Sequence Diagrams for Use Cases**
+
+Use Case 1
 ![Use Case 1](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/1f036572-2cac-41c6-8e6e-551eac399c57)
+
+Use Case 2
 ![Use Case 2](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/b651f786-a01d-415f-b20c-c369d73c1d66)
+
+Use Case 3
 ![Use Case 3](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/0ae8c8b5-a8ac-4839-910a-6e207bb9f322)
+
+Use Case 4
 ![Use Case 4](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/d89d5cc1-c258-4351-ba71-51ea19670103)
+
+Use Case 5
 ![Use Case 5](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/d8217765-235b-488c-80a8-436c4e8653ac)
+
+Use Case 6
 ![Use Case 6](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/d028ff85-ba88-41f9-bdd0-24372f073add)
 
 
