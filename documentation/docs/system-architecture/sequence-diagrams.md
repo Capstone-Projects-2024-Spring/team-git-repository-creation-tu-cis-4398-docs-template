@@ -8,7 +8,7 @@ sidebar_position: 3
 
 <Figure caption={"Use Case 1. Light Control through ASL Gestures."}>
 
-![IntelliGest System Block Diagram](../../staticmg/LightManagementSystem.png)
+![Light Managment System](../../static/img/LightManagementSystem.png)
 
 </Figure>``
 
