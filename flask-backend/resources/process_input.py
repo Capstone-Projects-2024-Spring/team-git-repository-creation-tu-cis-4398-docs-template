@@ -25,6 +25,19 @@ class ProcessInput(Resource):
         
         #get user input
         user_input = request.form.get("user_input")
+        response = self.openai_request(user_input)
+    
+        return jsonify({"USER_INPUT" : user_input, 
+                "OPENAI_RESPONSE" : response})
+    
+    
+    def openai_request(self, user_input):
+        """
+        Sends a request to OpenAI to generate a SQL Query based on the user input.
+        Args:
+        user_input (string): User's prompt for generating SQL query.
+        Returns: Generated SQL query as a String.
+        """
 
         response = client.chat.completions.create(
         model="gpt-3.5-turbo",
@@ -34,7 +47,4 @@ class ProcessInput(Resource):
         ],
         temperature=1
     )
-        response = response.choices[0].message.content
-        
-        return jsonify({"USER_INPUT" : user_input, 
-                "OPENAI_RESPONSE" : response})
+        return response.choices[0].message.content 
