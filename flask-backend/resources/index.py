@@ -14,6 +14,7 @@ class Index(Resource):
     def get(self):
         return jsonify({"message" : "Welcome to the API.", 
                 "endpoints" : {
+                    "index" : "/",
                     "process_input" : "/process_input"
                 }})
         
