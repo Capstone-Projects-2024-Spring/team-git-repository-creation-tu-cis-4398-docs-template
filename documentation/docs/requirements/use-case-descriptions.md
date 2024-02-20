@@ -23,26 +23,6 @@ A user wants to find view a heat map of violent crime within North Philadelphia 
 <li>The website displays a heat map showing the number of violent crimes committed in North Philadelphia in 2022</li>
 </ol>
 
-<s><h3>Use Case 3 - Map of Crime</h3></s>
-
-<s>Journalist writing paper on muggings in Philadelphia wants to know areas of high mugging concentration</s>
-<s><ol></s>
-<s><li>Journalist goes to PhillyGPT website</li></s>
-<s><li>Journalist enters a prompt asking “Show me a map revealing information on muggings in Philadelphia”</li></s>
-<s><li>The journalist is shown a map and zooms in on Fishtown. </li></s>
-<s><li>The journalist wants to be sure the data provided is accurate so they click on a link that brings them to the database that was used to create the map</li></s>
-<s><li>After checking directly from the source, the Journalist is confident in the findings. </li></s>
-<s></ol></s>
-
-<s><h3>Use Case 4 - Transportation Information</h3></s>
-
-<s>A student is researching public transportation in Philadelphia for a class project</s>
-<s><ol></s>
-<s><li>Student visits the PhillyGPT website</li></s>
-<s><li>Student enters a prompt asking for information on public transportation routes and schedules in Philadelphia</li></s>
-<s><li>The website provides the student with a detailed list of public transportation options, including bus routes, subway lines, and schedules.</li></s>
-<s></ol></s>
-
 <h3>Use Case 3 - Foot Traffic Identification</h3>
 
 A small business owner is considering opening a new restaurant in Philadelphia and want to identify the neighborhoods with the highest foot traffic
