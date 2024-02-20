@@ -11,11 +11,11 @@ client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
 )
 
-"""
-ProcessInput(Resource)
-This resouce handles user input and generates a SQL query using OpenAI
-"""
 class ProcessInput(Resource):
+    """
+    ProcessInput(Resource)
+    This resouce handles user input and generates a SQL query using OpenAI
+    """
     def post(self):
         """
         Handles POST http request method to the '/process_input/ endpoint.
@@ -30,7 +30,7 @@ class ProcessInput(Resource):
         return jsonify({"USER_INPUT" : user_input, 
                 "OPENAI_RESPONSE" : response})
     
-    
+
     def openai_request(self, user_input):
         """
         Sends a request to OpenAI to generate a SQL Query based on the user input.
