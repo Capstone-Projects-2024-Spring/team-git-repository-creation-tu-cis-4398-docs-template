@@ -18,7 +18,7 @@ class ProcessInput(Resource):
     """
     def post(self):
         """
-        Handles POST http request method to the '/process_input/ endpoint.
+        Handles POST HTTP requests to the '/process_input/ endpoint.
         Returns:
             JSON of user input and OpenAI response.
         """
