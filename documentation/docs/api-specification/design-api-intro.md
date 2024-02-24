@@ -18,6 +18,42 @@ General review of the software architecture for each module specified in Design 
 
 **For each class define the data fields, methods.**
 
+
+Home Assistant
+
+    Class Purpose: 
+    
+    The core of our system, acting as the server. It’s responsible for managing the state of all connected devices and automations. It communicates with the user interface to display device statuses. It also communicates with the IntelliGest system by receiving data payloads sent through an MQTT Broker which include a prediction for the action. It also interacts with the devices themselves to control their states based on user input and automation rules.
+
+    Data Fields/Attributes:
+
+        - devices[]
+            It will contain Information about all Home devices: TV, Alarm, Weather, Thermostat, Locks, Reminders, To-do list
+
+        - automations[]
+            Information about automations
+
+    Methods:
+    
+        - +add_device(): Function capable of adding a new device to Home Assitant
+
+        - +remove_device(): Function can remove a device
+
+        - +update_device_status(): Function can update device to current status
+
+        - +execute_automation(): Function executes automation for that device
+
+    
+
+
+
+
+
+
+
+
+
+
 The purpose of the class.
 
 The purpose of each data field.
