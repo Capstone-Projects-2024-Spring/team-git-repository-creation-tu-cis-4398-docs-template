@@ -22,26 +22,42 @@ General review of the software architecture for each module specified in Design 
 Home Assistant
 
     Class Purpose: 
-    
     The core of our system, acting as the server. It’s responsible for managing the state of all connected devices and automations. It communicates with the user interface to display device statuses. It also communicates with the IntelliGest system by receiving data payloads sent through an MQTT Broker which include a prediction for the action. It also interacts with the devices themselves to control their states based on user input and automation rules.
 
-    Data Fields/Attributes:
+    Data Fields / Attributes:
 
-        - devices[]
-            It will contain Information about all Home devices: TV, Alarm, Weather, Thermostat, Locks, Reminders, To-do list
+        -devices[]: It will contain Information about all Home devices: TV, Alarm, Weather, Thermostat, Locks, Reminders, To-do list
 
-        - automations[]
-            Information about automations
+        -automations[]: Information about automations
 
     Methods:
     
-        - +add_device(): Function capable of adding a new device to Home Assitant
+        +add_device(): Function capable of adding a new device to Home Assitant
 
-        - +remove_device(): Function can remove a device
+        +remove_device(): Function can remove a device
 
-        - +update_device_status(): Function can update device to current status
+        +update_device_status(): Function can update device to current status
 
-        - +execute_automation(): Function executes automation for that device
+        +execute_automation(): Function executes automation for that device
+
+
+
+User Interface
+
+    Class Purpose: 
+    The user interface is the Home Assistant dashboard that allows users to interact with the system. It sends user commands to the Home Assistant and displays the status of the devices. The dashboard is highly customizable and can display information from various components. We will be creating custom cards for the dashboard to display ASL images.
+
+    Data Fields / Attributes:
+
+        -user_id : User ID
+        -command : All 8 gestures 
+        -device_states[] : On/Off/Other state of the device
+
+
+    Methods:
+
+        +send_command() : Function sends commands
+        +display_device_state() : Function displays different states of the Home devices 
 
     
 
