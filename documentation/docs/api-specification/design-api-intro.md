@@ -50,7 +50,7 @@ User Interface
     Data Fields / Attributes:
 
         -user_id : User ID
-        -command : All 8 gestures 
+        -command : All 8 hand gestures for diffent devices
         -device_states[] : On/Off/Other state of the device
 
 
@@ -89,6 +89,7 @@ PythonScripts
 
     The TensorFlow Lite model, which has been trained to recognize ASL gestures, will then be loaded into the Coral TPU. The preprocessed images will be passed to this model to make predictions.
 
+
     Data Fields / Attributes:
 
         -model : Model of Python Script
@@ -124,6 +125,31 @@ JavaScriptCustomCards
 
 
 
+Camera
+
+    Class Purpose:
+    Camera catches instances of User hand gestures. Also, it sends those images to Class PythonScripts
+
+    Data Fields / Attributes:
+        -image : Image clicked 
+
+    Methods:
+        +capture_image() : Function captures Image of User's hand gestures at the right time
+
+
+
+TPU
+
+    Class Purpose:
+    TPU is responsible for loading all 8 Machine Learning Models and accurately identifies the User Hand Gesture and sends it to PythonScripts class. 
+    
+    Data Fields / Attributes:
+            -model : Name of TPU model
+
+    Methods:
+        +load_model() : Function loads Machine Learning model 
+        +make_prediction() : Function accurately identifies User hand gesture
+       
 
 
 
