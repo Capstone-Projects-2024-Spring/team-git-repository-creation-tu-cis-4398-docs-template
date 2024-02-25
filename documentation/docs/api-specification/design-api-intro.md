@@ -56,10 +56,29 @@ User Interface
 
     Methods:
 
-        +send_command() : Function sends commands
-        +display_device_state() : Function displays different states of the Home devices 
+        +send_command() : Function sends commands from User Interface
+        +display_device_state() : Function displays different states of Home devices on User Interface 
 
     
+
+Device
+
+    Class Purpose:
+    These are the actual smart home devices (like lights, thermostats, cameras, etc.) that are being controlled. They communicate with Home Assistant to receive commands and send status updates. The devices are controlled using the built-in components provided by Home Assistant, but can be written to include other devices.
+
+    Data Fields / Attributes:
+
+        -device_id : Device ID
+        -device_type : Type of device
+        -status : Status of device
+        -capabilities[] : Capabilities of the device
+
+    Methods:
+
+        +update_status() : Function updates status of device
+        +execute_capability() : Function executes capabilities of device
+
+        
 
 
 
