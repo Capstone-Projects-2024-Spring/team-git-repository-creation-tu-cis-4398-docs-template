@@ -39,111 +39,172 @@ Function can update device to current status
 
 Function executes automation for that device
 
-#### User Interface
+## User Interface
 
-    Class Purpose: 
-    The user interface is the Home Assistant dashboard that allows users to interact with the system. It sends user commands to the Home Assistant and displays the status of the devices. The dashboard is highly customizable and can display information from various components. We will be creating custom cards for the dashboard to display ASL images.
+### Class Purpose
 
-    Data Fields / Attributes:
+The user interface is the Home Assistant dashboard that allows users to interact with the system. It sends user commands to the Home Assistant and displays the status of the devices. The dashboard is highly customizable and can display information from various components. We will be creating custom cards for the dashboard to display ASL images.
 
-        -user_id : User ID
-        -command : All 8 hand gestures for diffent devices
-        -device_states[] : On/Off/Other state of the device
+#### Data Fields / Attributes:
 
+-user_id : User ID
+-command : All 8 hand gestures for diffent devices
+-device_states[] : On/Off/Other state of the device
 
-    Methods:
+#### Methods
 
-        +send_command() : Function sends commands from User Interface
-        +display_device_state() : Function displays different states of Home devices on User Interface 
+##### `+send_command()`
 
-    
+Function sends commands from User Interface
 
-Device
+##### `+display_device_state()`
 
-    Class Purpose:
-    These are the actual smart home devices (like lights, thermostats, cameras, etc.) that are being controlled. They communicate with Home Assistant to receive commands and send status updates. The devices are controlled using the built-in components provided by Home Assistant, but can be written to include other devices.
+Function displays different states of Home devices on User Interface
 
-    Data Fields / Attributes:
+## Device
 
-        -device_id : Device ID
-        -device_type : Type of device
-        -status : Status of device
-        -capabilities[] : Capabilities of the device
+### Class Purpose
 
-    Methods:
+These are the actual smart home devices (lights, thermostats, cameras, etc.) that are being controlled. They communicate with Home Assistant to receive commands and send status updates. The devices are controlled using the built-in components provided by Home Assistant, but can be written to include other devices.
 
-        +update_status() : Function updates status of device
-        +execute_capability() : Function executes capabilities of device
+#### Data Fields / Attributes
 
+##### `-device_id`
 
+Device ID that is a discriminator to determine a device.
 
-PythonScripts
+##### `-device_type`
 
-    Class Purpose:
-    These are scripts that we will write to load the machine learning model into the Coral TPU, capture and pre-process images using OpenCV, and make predictions. The scripts will be run on a Raspberry Pi 4, with a Coral TPU co-processor.
+Type of device
 
-    The OpenCV library will be used to capture images or video frames from a camera connected to the Raspberry Pi. These images will then be preprocessed (e.g., resized, normalized) to be compatible with the input requirements of the TensorFlow Lite model.
+##### `-status`
 
-    The TensorFlow Lite model, which has been trained to recognize ASL gestures, will then be loaded into the Coral TPU. The preprocessed images will be passed to this model to make predictions.
+Status of device
 
+##### `-capabilities[]`
 
-    Data Fields / Attributes:
+Capabilities of the device, as specified by requirements or Apple's HAP when necessary.
 
-        -model : Model of Python Script
-        -interpreter : 
-        -image : 
-        -prediction : 
+#### Methods:
 
-    Methods:
+##### `+update_status()`
 
-        +load_model() : Function loads Machine Learning model of PythonScript
-        +capture_image() : Function captures Image of User's hand gestures
-        +preprocess_image() : Function Pre-Processes Image of User's hand gestures
-        +make_prediction() : Function makes prediction to identify correct hand gesture
+Function updates status of device
 
+##### `+execute_capability()`
 
+Function executes capabilities of device
 
-JavaScriptCustomCards
+## PythonScripts
 
-    Class Purpose:
-    These are custom cards that we will create for the Home Assistant dashboard to display ASL images. The cards will be written in JavaScript and Home Assistant frontend development framework and will be used to enhance the user interface for our targeted demographic and provide necessary visual feedback when required.
+### Class Purpose
 
-    Data Fields / Attributes:
+These are scripts that we will write to load the machine learning model into the Coral TPU, capture and pre-process images using OpenCV, and make predictions. The scripts will be run on a Raspberry Pi 4, with a Coral TPU co-processor.
 
-        -card_id : Javascript Custom Card ID 
-        -image : Image of Javascript Custom Card
-        -display_state : State of Javascript Custom Card
+The OpenCV library will be used to capture images or video frames from a camera connected to the Raspberry Pi. These images will then be preprocessed (e.g., resized, normalized) to be compatible with the input requirements of the TensorFlow Lite model.
 
-    Methods:
+The TensorFlow Lite model, which has been trained to recognize ASL gestures, will then be loaded into the Coral TPU. The preprocessed images will be passed to this model to make predictions.
 
-        +create_card() : Function gives ability to users to create a new Custom Card
-        +display_image() : Function displays image of Javascript Custom Card
-        +update_display_state() : Function updates state of Javascript Custom Card to current state
+#### Data Fields / Attributes
 
+##### `-model`
 
+Model of Python Script
 
-Camera
+##### `-interpreter`
 
-    Class Purpose:
-    Camera catches instances of User hand gestures. Also, it sends those images to Class PythonScripts
+##### `-image`
 
-    Data Fields / Attributes:
-        -image : Image clicked 
+##### `-prediction`
 
-    Methods:
-        +capture_image() : Function captures Image of User's hand gestures at the right time
+#### Methods
 
+##### `+load_model()`
 
+Function loads Machine Learning model of PythonScripts
 
-TPU
+##### `+capture_image()`
 
-    Class Purpose:
-    TPU is responsible for loading all 8 Machine Learning Models and accurately identifies the User Hand Gesture and sends it to PythonScripts class. 
-    
-    Data Fields / Attributes:
-            -model : Name of TPU model
+Function captures Image of User's hand gestures
 
-    Methods:
-        +load_model() : Function loads Machine Learning model 
-        +make_prediction() : Function accurately identifies User hand gesture
-       
+##### `+preprocess_image()`
+
+Function Pre-Processes Image of User's hand gestures
+
+##### `+make_prediction()`
+
+Function makes prediction to identify correct hand gesture
+
+## JavaScriptCustomCards
+
+### Class Purpose
+
+These are custom cards that we will create for the Home Assistant dashboard to display ASL images. The cards will be written in JavaScript and Home Assistant frontend development framework and will be used to enhance the user interface for our targeted demographic and provide necessary visual feedback when required.
+
+#### Data Fields / Attributes
+
+##### `-card_id`
+
+Javascript Custom Card ID
+
+##### `-image`
+
+Image of Javascript Custom Card\
+
+##### `-display_state`
+
+State of Javascript Custom Card
+
+#### Methods
+
+##### `+create_card()`
+
+Function gives ability to users to create a new Custom Card
+
+##### `+display_image()`
+
+Function displays image of Javascript Custom Card
+
+##### `+update_display_state()`
+
+Function updates state of Javascript Custom Card to current state
+
+## Camera
+
+### Class Purpose
+
+Camera catches instances of User hand gestures. Also, it sends those images to Class PythonScripts
+
+#### Data Fields / Attributes
+
+##### `-image`
+
+Image used in processing
+
+#### Methods
+
+##### `+capture_image()`
+
+Function captures Image of User's hand gestures at the right time
+
+## TPU
+
+### Class Purpose
+
+TPU is responsible for loading all 8 Machine Learning Models and accurately identifies the User Hand Gesture and sends it to PythonScripts class.
+
+#### Data Fields / Attributes:
+
+##### `-model`
+
+Model being processed
+
+#### Methods
+
+##### `+load_model()`
+
+Function loads Machine Learning model
+
+##### `+make_prediction()`
+
+Function accurately identifies User hand gesture
