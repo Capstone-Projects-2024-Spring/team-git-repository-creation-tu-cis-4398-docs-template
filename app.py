@@ -8,9 +8,9 @@ class App():
     app : Flask application which creates and controls the url routes
     db : database connection which allows for interaction with the SQL database
     """
-    app=Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI']= 'sqlite:///test.db'
-    db = Database(SQLAlchemy(app))
+    _app=Flask(__name__)
+    _app.config['SQLALCHEMY_DATABASE_URI']= 'sqlite:///test.db'
+    _db = Database(SQLAlchemy(_app))
 
     def run(self,host: str | None = None,port: int | None = None, debug: bool | None = None, load_dotenv: bool = True,**options):
         """
@@ -35,21 +35,21 @@ class App():
         pass
 
 
-    @app.route('/')
+    @_app.route('/')
     def log_in(self):
         """
         Handles the requests made to the welcome page where users can log in, register, or continue as guests
         """
         pass
 
-    @app.route('/menu')
+    @_app.route('/menu')
     def menu(self):
         """
         Handles the requests made to the menu page with the game mode selection and options/preferences button
         """
         pass
     
-    @app.route('/game/<int:mode>')
+    @_app.route('/game/<int:mode>')
     def game(self,mode:int):
         """
         Handles the requests made to the game based on the mode selected by the user on the menu page
