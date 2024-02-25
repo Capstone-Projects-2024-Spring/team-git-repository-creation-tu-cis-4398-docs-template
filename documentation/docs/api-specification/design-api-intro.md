@@ -78,7 +78,53 @@ Device
         +update_status() : Function updates status of device
         +execute_capability() : Function executes capabilities of device
 
-        
+
+
+PythonScripts
+
+    Class Purpose:
+    These are scripts that we will write to load the machine learning model into the Coral TPU, capture and pre-process images using OpenCV, and make predictions. The scripts will be run on a Raspberry Pi 4, with a Coral TPU co-processor.
+
+    The OpenCV library will be used to capture images or video frames from a camera connected to the Raspberry Pi. These images will then be preprocessed (e.g., resized, normalized) to be compatible with the input requirements of the TensorFlow Lite model.
+
+    The TensorFlow Lite model, which has been trained to recognize ASL gestures, will then be loaded into the Coral TPU. The preprocessed images will be passed to this model to make predictions.
+
+    Data Fields / Attributes:
+
+        -model : Model of Python Script
+        -interpreter : 
+        -image : 
+        -prediction : 
+
+    Methods:
+
+        +load_model() : Function loads Machine Learning model of PythonScript
+        +capture_image() : Function captures Image of User's hand gestures
+        +preprocess_image() : Function Pre-Processes Image of User's hand gestures
+        +make_prediction() : Function makes prediction to identify correct hand gesture
+
+
+
+JavaScriptCustomCards
+
+    Class Purpose:
+    These are custom cards that we will create for the Home Assistant dashboard to display ASL images. The cards will be written in JavaScript and Home Assistant frontend development framework and will be used to enhance the user interface for our targeted demographic and provide necessary visual feedback when required.
+
+    Data Fields / Attributes:
+
+        -card_id : Javascript Custom Card ID 
+        -image : Image of Javascript Custom Card
+        -display_state : State of Javascript Custom Card
+
+    Methods:
+
+        +create_card() : Function gives ability to users to create a new Custom Card
+        +display_image() : Function displays image of Javascript Custom Card
+        +update_display_state() : Function updates state of Javascript Custom Card to current state
+
+
+
+
 
 
 
