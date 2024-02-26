@@ -39,23 +39,30 @@ class App:
     def log_in():
         """
         Handles the requests made to the welcome page where users can log in, register, or continue as guests
+        Postcondition: a new user will be registered with a message saying "Successfully registered" and the database will update with the new user
+        info, a message with "Incorrect username or password", or the user will be redirected to /menu
+        :return : a Response object that redirects the user to the menu page on success, otherwise a str message appears saying either the username or password was incorrect
         """
-        return ''
+        pass
 
     @_app.route('/menu')
     def menu():
         """
         Handles the requests made to the menu page with the game mode selection and options/preferences button
+        Postcondition: an integer from the range 0 to the number of game modes minus 1 will be selected and sent as part of the /game/<int:mode> request
+        :return : a Response object that redirects the user to a game session of the game mode they selected
         """
-        return ''
+        pass
     
     @_app.route('/game/<int:mode>')
     def game(mode:int):
         """
         Handles the requests made to the game based on the mode selected by the user on the menu page
+        Precondition: mode shall be an int from the range 0 to the number of game modes minus 1
         :param mode : number representing the game mode selected by the user
+        :return : string indicating the end of the game and the user's wpm and percent of words typed correct
         """
-        return ''
+        pass
 
 class Database:
     def __init__(self,app:App):
