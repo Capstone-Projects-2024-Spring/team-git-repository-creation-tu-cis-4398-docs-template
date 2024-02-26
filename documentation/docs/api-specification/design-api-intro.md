@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: Descriptions of Classes and fields
+description: Descriptions of classes, fields, and functions
 ---
 
 # Design Document - API
@@ -47,9 +47,17 @@ The user interface is the Home Assistant dashboard that allows users to interact
 
 #### Data Fields / Attributes:
 
--user_id : User ID
--command : All 8 hand gestures for diffent devices
--device_states[] : On/Off/Other state of the device
+##### `-user_id`
+
+User ID
+
+##### `-command`
+
+All 8 hand gestures for diffent devices
+
+##### `-device_states[]`
+
+On/Off/Other state of the device
 
 #### Methods
 
@@ -85,7 +93,7 @@ Status of device
 
 Capabilities of the device, as specified by requirements or Apple's HAP when necessary.
 
-#### Methods:
+#### Methods
 
 ##### `+update_status()`
 
@@ -109,13 +117,19 @@ The TensorFlow Lite model, which has been trained to recognize ASL gestures, wil
 
 ##### `-model`
 
-Model of Python Script
+This is the machine learning model loaded into the Coral TPU.
 
 ##### `-interpreter`
 
+This is the TensorFlow Lite interpreter used to run the model.
+
 ##### `-image`
 
+This is the image captured by the Pi Camera.
+
 ##### `-prediction`
+
+This is the prediction made by the model based on the image.
 
 #### Methods
 
@@ -149,25 +163,25 @@ Javascript Custom Card ID
 
 ##### `-image`
 
-Image of Javascript Custom Card\
+Image of Javascript Custom Card
 
 ##### `-display_state`
 
-State of Javascript Custom Card
+This is the current display state of the custom card.
 
 #### Methods
 
 ##### `+create_card()`
 
-Function gives ability to users to create a new Custom Card
+This function creates a new custom card.
 
 ##### `+display_image()`
 
-Function displays image of Javascript Custom Card
+This function displays an `image` on the custom card.
 
 ##### `+update_display_state()`
 
-Function updates state of Javascript Custom Card to current state
+This function updates the `display_state` of the custom card.
 
 ## Camera
 
@@ -185,7 +199,7 @@ Image used in processing
 
 ##### `+capture_image()`
 
-Function captures Image of User's hand gestures at the right time
+This function captures an image or video frame.
 
 ## TPU
 
@@ -197,7 +211,7 @@ TPU is responsible for loading all 8 Machine Learning Models and accurately iden
 
 ##### `-model`
 
-Model being processed
+This is the machine learning model loaded into the Coral TPU.
 
 #### Methods
 
@@ -207,4 +221,4 @@ Function loads Machine Learning model
 
 ##### `+make_prediction()`
 
-Function accurately identifies User hand gesture
+This function makes a prediction based on the preprocessed image using the model loaded into the Coral TPU.
