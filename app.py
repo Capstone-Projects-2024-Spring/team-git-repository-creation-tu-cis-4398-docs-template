@@ -65,30 +65,43 @@ class App:
         pass
 
 class Database:
-    def __init__(self,app:App):
-        self._app = app
+    """
+    A class representing a database connection and operations.
 
-class UserData(App.db.Model):
+    Attributes:
+        _app (App): The Flask application instance associated with the database.
+        _models (dict): A dictionary containing model classes representing database tables. Keys are model names, and values are the corresponding model classes.
+
+    Methods:
+        __init__(app: App, **models)
+            Initializes a Database instance with the provided Flask application and model classes.
+        insert(username: str, wpm: int = None, accuracy: float = None, wins: int = None, losses: int = None, freq_mistyped_words: str = None)
+            Inserts a new user record into the database.
+        update(username: str, **kwargs)
+            Updates a user record in the database.
+        query(username: str)
+            Queries a user record from the database.
     """
-    Representation of user data stored in the database under the UserData table
-    _username : unique identifier of a user
-    _pswd : user's password
-    _wpm : words per minute
-    _accuracy : percent of words typed correctly
-    _wins : number of multiplayer matches won
-    _losses : number of multiplayer matches lost
-    _freq_mistyped_words : string of words/phrases frequently mistyped separated by the '|' character
-    """
-    _username = App.db.Column(App.db.String(15),nullable=False,primary_key=True)
-    _pswd = App.db.Column(App.db.String(20),nullable=False)
-    _wpm = App.db.Column(App.db.SmallInteger)
-    _accuracy = App.db.Column(App.db.Numeric)
-    _wins = App.db.Column(App.db.Integer)
-    _losses = App.db.Column(App.db.Integer)
-    _freq_mistyped_words = App.db.Column(App.db.String(STR_MAX_SIZE))
+    
+    def __init__(self,app:App, **models):
+        """
+        Initializes a Database instance with the provided Flask application and model classes.
+
+        :param app: The Flask application instance associated with the database.
+        :type app: App
+        :param models: Keyword arguments representing model classes representing database tables. Keys are model names, and values are the corresponding model classes.
+        :type models: dict
+
+        :returns: None
+
+        :precondition: App and App.db are fully configured
+        :precondition: model(s) are fully configured and set-up
+        """
+        self._app = app
+        self._models = models
 
     @staticmethod
-    def insert(username: str, pswd: str, wpm: int = None, accuracy: float = None,
+    def insert(username: str, wpm: int = None, accuracy: float = None,
                wins: int = None, losses: int = None,
                freq_mistyped_words: str = None):
         """
@@ -96,8 +109,6 @@ class UserData(App.db.Model):
 
         :param username: Unique identifier of the user.
         :type username: str
-        :param pswd: User's password.
-        :type pswd: str
         :param wpm: Words per minute. Defaults to None.
         :type wpm: int, optional
         :param accuracy: Percent of words typed correctly. Defaults to None.
@@ -108,6 +119,11 @@ class UserData(App.db.Model):
         :type losses: int, optional
         :param freq_mistyped_words: String of words/phrases frequently mistyped separated by the '|' character. Defaults to None.
         :type freq_mistyped_words: str, optional
+
+        :precondition: `username` must not be empty.
+        :precondition: `username` must be unique.
+        :precondition: If provided, `wpm`, `accuracy`, `wins`, `losses`, and `freq_mistyped_words` must be of the correct data types and within acceptable ranges.
+        :postcondition: If successful, a new user record is inserted into the database.
         """
         pass
 
@@ -120,6 +136,11 @@ class UserData(App.db.Model):
         :type username: str
         :param **kwargs: Keyword arguments representing fields to be updated. Valid fields are '_pswd', '_wpm',
             '_accuracy', '_wins', '_losses', and '_freq_mistyped_words'.
+
+        :precondition: `username` must exist in the database.
+        :precondition: At least one field to update must be provided.
+        :precondition: If provided, values for fields must be of the correct data types and within acceptable ranges.
+        :postcondition: If successful, the user record is updated with the provided values.
         """
         pass
 
@@ -133,9 +154,28 @@ class UserData(App.db.Model):
 
         :return: Returns the UserData object if found, else None.
         :rtype: UserData or None
+
+        :precondition: `username` must be a valid user identifier.
+        :postcondition: If a user with the provided username exists in the database, returns the corresponding UserData object; otherwise, returns None.
         """
         pass
-    
+
+class UserData(App.db.Model):
+    """
+    Representation of user data stored in the database under the UserData table
+    _username : unique identifier of a user
+    _wpm : words per minute
+    _accuracy : percent of words typed correctly
+    _wins : number of multiplayer matches won
+    _losses : number of multiplayer matches lost
+    _freq_mistyped_words : string of words/phrases frequently mistyped separated by the '|' character
+    """
+    _username = App.db.Column(App.db.String(15),nullable=False,primary_key=True)
+    _wpm = App.db.Column(App.db.SmallInteger)
+    _accuracy = App.db.Column(App.db.Numeric)
+    _wins = App.db.Column(App.db.Integer)
+    _losses = App.db.Column(App.db.Integer)
+    _freq_mistyped_words = App.db.Column(App.db.String(STR_MAX_SIZE))
 
     def repr():
         """
