@@ -1,16 +1,16 @@
-from flask import Flask,render_template,redirect,url_for, request
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from database import Database
+STR_MAX_SIZE = 65535
 
-class App():
+class App:
     """
     This will serve as the Flask backend of the application which will contain the logic for each of the routes.
-    app : Flask application which creates and controls the url routes
-    db : database connection which allows for interaction with the SQL database
+    _app : Flask application which creates and controls the url routes
+    _db : database connection which allows for interaction with the SQL database
     """
-    _app=Flask(__name__)
-    _app.config['SQLALCHEMY_DATABASE_URI']= 'sqlite:///test.db'
-    _db = Database(SQLAlchemy(_app))
+    _app = Flask(__name__)
+    _app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+    db = SQLAlchemy(_app)
 
     def run(self,host: str | None = None,port: int | None = None, debug: bool | None = None, load_dotenv: bool = True,**options):
         """
@@ -32,27 +32,54 @@ class App():
             server. See :func:`werkzeug.serving.run_simple` for more
             information.
         """
-        pass
+        self._app.run()
 
 
     @_app.route('/')
-    def log_in(self):
+    def log_in():
         """
         Handles the requests made to the welcome page where users can log in, register, or continue as guests
         """
-        pass
+        return ''
 
     @_app.route('/menu')
-    def menu(self):
+    def menu():
         """
         Handles the requests made to the menu page with the game mode selection and options/preferences button
         """
-        pass
+        return ''
     
     @_app.route('/game/<int:mode>')
-    def game(self,mode:int):
+    def game(mode:int):
         """
         Handles the requests made to the game based on the mode selected by the user on the menu page
         :param mode : number representing the game mode selected by the user
         """
-        pass
+        return ''
+
+class Database:
+    def __init__(self,app:App):
+        self._app = app
+
+class UserData(App.db.Model):
+        """
+        Representation of user data stored in the database under the UserData table
+        _username : unique identifier of a user
+        _pswd : user's password
+        _wpm : words per minute
+        _accuracy : percent of words typed correctly
+        _wins : number of multiplayer matches won
+        _losses : number of multiplayer matches lost
+        _freq_mistyped_words : string of words/phrases frequently mistyped separated by the '|' character
+        """
+        _username = App.db.Column(App.db.String(15),nullable=False,primary_key=True)
+        _pswd = App.db.Column(App.db.String(20),nullable=False)
+        _wpm = App.db.Column(App.db.SmallInteger)
+        _accuracy = App.db.Column(App.db.Numeric)
+        _wins = App.db.Column(App.db.Integer)
+        _losses = App.db.Column(App.db.Integer)
+        _freq_mistyped_words = App.db.Column(App.db.String(STR_MAX_SIZE))
+
+if __name__=='__main__':
+    app = App()
+    app.run(debug=True)
