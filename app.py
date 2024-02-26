@@ -87,6 +87,56 @@ class UserData(App.db.Model):
     _losses = App.db.Column(App.db.Integer)
     _freq_mistyped_words = App.db.Column(App.db.String(STR_MAX_SIZE))
 
+    @staticmethod
+    def insert(username: str, pswd: str, wpm: int = None, accuracy: float = None,
+               wins: int = None, losses: int = None,
+               freq_mistyped_words: str = None):
+        """
+        Insert a new user record into the database.
+
+        :param username: Unique identifier of the user.
+        :type username: str
+        :param pswd: User's password.
+        :type pswd: str
+        :param wpm: Words per minute. Defaults to None.
+        :type wpm: int, optional
+        :param accuracy: Percent of words typed correctly. Defaults to None.
+        :type accuracy: float, optional
+        :param wins: Number of multiplayer matches won. Defaults to None.
+        :type wins: int, optional
+        :param losses: Number of multiplayer matches lost. Defaults to None.
+        :type losses: int, optional
+        :param freq_mistyped_words: String of words/phrases frequently mistyped separated by the '|' character. Defaults to None.
+        :type freq_mistyped_words: str, optional
+        """
+        pass
+
+    @staticmethod
+    def update(username: str, **kwargs):
+        """
+        Update a user record in the database.
+
+        :param username: Unique identifier of the user to be updated.
+        :type username: str
+        :param **kwargs: Keyword arguments representing fields to be updated. Valid fields are '_pswd', '_wpm',
+            '_accuracy', '_wins', '_losses', and '_freq_mistyped_words'.
+        """
+        pass
+
+    @staticmethod
+    def query(username: str):
+        """
+        Query a user record from the database.
+
+        :param username: Unique identifier of the user to be queried.
+        :type username: str
+
+        :return: Returns the UserData object if found, else None.
+        :rtype: UserData or None
+        """
+        pass
+    
+
     def repr():
         """
         Returns a string representation of the user
