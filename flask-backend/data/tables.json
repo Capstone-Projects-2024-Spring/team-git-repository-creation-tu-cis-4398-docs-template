@@ -1,0 +1,127 @@
+{
+    "tables": [
+      {
+        "name": "crime_by_city",
+        "description": "Table 'crime_by_city' has city-level crime data in the United States. It has numbers for violent crime, murder and nonnegligent manslaughter, rape, robbery, aggravated assault, property crime, burglary, larceny theft, motor vehicle theft, and arson.",
+        "columns": [
+          {
+            "name": "city",
+            "type": "TEXT",
+            "description": "City"
+          },
+          {
+            "name": "state",
+            "type": "TEXT",
+            "description": "State"
+          },
+          {
+            "name": "violent_crime",
+            "type": "FLOAT",
+            "description": "Violent Crime"
+          },
+          {
+            "name": "murder_and_nonnegligent_manslaughter",
+            "type": "FLOAT",
+            "description": "Murder and Nonnegligent Manslaughter"
+          },
+          {
+            "name": "rape",
+            "type": "FLOAT",
+            "description": "Rape"
+          },
+          {
+            "name": "robbery",
+            "type": "FLOAT",
+            "description": "Robbery"
+          },
+          {
+            "name": "aggravated_assault",
+            "type": "FLOAT",
+            "description": "Aggravated Assault"
+          },
+          {
+            "name": "property_crime",
+            "type": "FLOAT",
+            "description": "Property Crime"
+          },
+          {
+            "name": "burglary",
+            "type": "FLOAT",
+            "description": "Burglary"
+          },
+          {
+            "name": "larceny_theft",
+            "type": "FLOAT",
+            "description": "Larceny Theft"
+          },
+          {
+            "name": "motor_vehicle_theft",
+            "type": "FLOAT",
+            "description": "Motor Vehicle Theft"
+          },
+          {
+            "name": "arson",
+            "type": "FLOAT",
+            "description": "Arson"
+          }
+        ]
+      },
+      {
+        "name": "housing_projects",
+        "description": "Table 'housing_projects' contains information about different housing projects, including Object ID, Fiscal Year Complete, Project Name, Developer Name, Address, Project Type, Total Units, Accessible Units, Sensory Units, and Visitable Units.",
+        "columns": [
+          {
+            "name": "objectid",
+            "type": "INTEGER",
+            "description": "Object ID"
+          },
+          {
+            "name": "fiscal_year_complete",
+            "type": "INTEGER",
+            "description": "Fiscal Year Complete"
+          },
+          {
+            "name": "project_name",
+            "type": "TEXT",
+            "description": "Project Name"
+          },
+          {
+            "name": "developer_name",
+            "type": "TEXT",
+            "description": "Developer Name"
+          },
+          {
+            "name": "address",
+            "type": "TEXT",
+            "description": "Address"
+          },
+          {
+            "name": "project_type",
+            "type": "TEXT",
+            "description": "Project Type"
+          },
+          {
+            "name": "total_units",
+            "type": "INTEGER",
+            "description": "Total Units"
+          },
+          {
+            "name": "accessible_units",
+            "type": "INTEGER",
+            "description": "Accessible Units"
+          },
+          {
+            "name": "sensory_units",
+            "type": "INTEGER",
+            "description": "Sensory Units"
+          },
+          {
+            "name": "visitable_units",
+            "type": "INTEGER",
+            "description": "Visitable Units"
+          }
+        ]
+      }
+    ]
+  }
+  

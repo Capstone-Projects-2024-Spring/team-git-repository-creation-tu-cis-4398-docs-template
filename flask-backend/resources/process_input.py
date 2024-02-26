@@ -3,6 +3,8 @@ from flask_restful import Resource
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
+from tables.table_selection import find_most_relevant_table, load_tables_from_json
+
 
 #load .env file
 load_dotenv()
@@ -25,10 +27,17 @@ class ProcessInput(Resource):
         
         #get user input
         user_input = request.form.get("user_input")
+
+        # Call the table classification functions
+        tables_data = load_tables_from_json("data/tables.json")
+        most_relevant_table = find_most_relevant_table(user_input, tables_data)
+
         response = self.openai_request(user_input)
     
         return jsonify({"USER_INPUT" : user_input, 
-                "OPENAI_RESPONSE" : response})
+                "OPENAI_RESPONSE" : response,
+                "MOST_RELEVANT_TABLE": most_relevant_table
+                })
     
 
     def openai_request(self, user_input):
