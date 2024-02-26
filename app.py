@@ -69,23 +69,31 @@ class Database:
         self._app = app
 
 class UserData(App.db.Model):
+    """
+    Representation of user data stored in the database under the UserData table
+    _username : unique identifier of a user
+    _pswd : user's password
+    _wpm : words per minute
+    _accuracy : percent of words typed correctly
+    _wins : number of multiplayer matches won
+    _losses : number of multiplayer matches lost
+    _freq_mistyped_words : string of words/phrases frequently mistyped separated by the '|' character
+    """
+    _username = App.db.Column(App.db.String(15),nullable=False,primary_key=True)
+    _pswd = App.db.Column(App.db.String(20),nullable=False)
+    _wpm = App.db.Column(App.db.SmallInteger)
+    _accuracy = App.db.Column(App.db.Numeric)
+    _wins = App.db.Column(App.db.Integer)
+    _losses = App.db.Column(App.db.Integer)
+    _freq_mistyped_words = App.db.Column(App.db.String(STR_MAX_SIZE))
+
+    def repr():
         """
-        Representation of user data stored in the database under the UserData table
-        _username : unique identifier of a user
-        _pswd : user's password
-        _wpm : words per minute
-        _accuracy : percent of words typed correctly
-        _wins : number of multiplayer matches won
-        _losses : number of multiplayer matches lost
-        _freq_mistyped_words : string of words/phrases frequently mistyped separated by the '|' character
+        Returns a string representation of the user
+        :return :
         """
-        _username = App.db.Column(App.db.String(15),nullable=False,primary_key=True)
-        _pswd = App.db.Column(App.db.String(20),nullable=False)
-        _wpm = App.db.Column(App.db.SmallInteger)
-        _accuracy = App.db.Column(App.db.Numeric)
-        _wins = App.db.Column(App.db.Integer)
-        _losses = App.db.Column(App.db.Integer)
-        _freq_mistyped_words = App.db.Column(App.db.String(STR_MAX_SIZE))
+        pass
+
 
 if __name__=='__main__':
     app = App()
