@@ -9,4 +9,6 @@ class HandGestureInputControl:
 
     def mapGestureToAction(gesture:str):
         return
+    
+    def performClickAction(void):void
  

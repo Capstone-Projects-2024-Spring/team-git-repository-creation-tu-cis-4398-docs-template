@@ -14,4 +14,4 @@ class MiniGameSelectionScreen:
         return 
     
     def exitGame():
-        return
+        pygame.quit()
