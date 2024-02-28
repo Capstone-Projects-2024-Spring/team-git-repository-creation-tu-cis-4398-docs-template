@@ -22,24 +22,80 @@ Current System Architecure Diagram (work in progress)
 - **Carto's SQL API Integration**
   - For geographical purposes PhillyGPT will utilize code that makes HTTP requests to Carto's SQL API for executing SQL queries on spatial data. API requests to Carto's SQL API endpoint will be made by passing SQL queries and receiving query results in JSON format.
 
-**Sequence Diagrams for Use Cases**
+<h2>Sequence Diagrams for Use Cases</h2>
 
-Use Case 1
+<h3>Use Case 1 - Number of Related Deaths</h3>
+
+A healthcare researcher wants to study affects of covid cases.
+<ol>
+<li>User loads the PhillyGPT website.</li>
+<li>User enters a prompt to ask the number of covid deaths.</li>
+<li>User submits the prompt.</li>
+<li>Based on the users response they get results related to the covid deaths query.</li>
+<li>A table is displayed showing the statistics of covid related deaths within Philadelphia.</li>
+</ol>
+
+
 ![Use Case 1](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/1f036572-2cac-41c6-8e6e-551eac399c57)
 
-Use Case 2
+<h3>Use Case 2 - Heat Map of Crime</h3>
+
+A user wants to find view a heat map of violent crime within North Philadelphia and do further research based on the result
+<ol>
+<li>User loads the PhillyGPT website</li>
+<li>User enters a prompt to ask for a heat map of violent crimes in North Philadelphia</li>
+<li>User submits the prompt </li>
+<li>The website displays a map showing a heat map of violent crimes committed in North Philadelphia</li>
+<li>The user decides to refine the prompt for the heat map to only show violent crime within North Philadelphia only in 2022</li>
+<li>The website displays a heat map showing the number of violent crimes committed in North Philadelphia in 2022</li>
+</ol>
+
 ![Use Case 2](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/b651f786-a01d-415f-b20c-c369d73c1d66)
 
-Use Case 3
+<h3>Use Case 3 - Foot Traffic Identification</h3>
+
+A small business owner is considering opening a new restaurant in Philadelphia and want to identify the neighborhoods with the highest foot traffic
+<ol>
+<li>The business owner goes to the PhillyGPT website and input a prompt asking for foot traffic data.</li>
+<li>The website provides the business owner with a heatmap showing areas of high foot traffic based on various parameters such as commercial activity and popular density.</li>
+<li>Using this information, the business owner can make informed decisions about the location of his/her restaurant.</li>
+</ol>
+
 ![Use Case 3](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/0ae8c8b5-a8ac-4839-910a-6e207bb9f322)
 
-Use Case 4
+<h3>Use Case 4 - Location Analysis</h3>
+
+An urban planner wants to create a new green space in the city
+<ol>
+<li>They go to the PhillyGPT website and request analysis of the parks and green spaces around the city.</li>
+<li>A map is shown of all the green spaces highlighted throughout the city.</li>
+<li>A table is shown that has relevant details about every green space such as their area and amenities.</li>
+</ol>
+
 ![Use Case 4](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/d89d5cc1-c258-4351-ba71-51ea19670103)
 
-Use Case 5
+<h3>Use Case 5 - Real Estate Analysis</h3>
+
+A real estate investor is looking for abandoned houses to buy and flip
+<ol>
+<li>They go to the PhillyGPT website and asks about abandoned houses for sale in the city</li>
+<li>A map is shown which pinpoints the properties.</li>
+<li>In a response box, there is a response saying “There are __ vacant properties for sale in the city”.</li>
+<li>The investor then asks about information about a vacant house at a certain address.</li>
+<li>A response is returned with information such as the cost, square footage, and time its been vacant.</li>
+</ol>
+
 ![Use Case 5](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/d8217765-235b-488c-80a8-436c4e8653ac)
 
-Use Case 6
+<h3>Use Case 6 - Leisure Activities</h3>
+
+Tourists are visiting Philadelphia and want to know about landmarks.
+<ol>
+<li>They go to the PhillyGPT website and ask where all the famous landmarks are.</li>
+<li>A map is returned pinpointing the top famous landmarks.</li>
+<li>A table is returned with information about the top famous landmarks, such as their physical location, name, and what makes them famous.</li>
+</ol>
+
 ![Use Case 6](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/d028ff85-ba88-41f9-bdd0-24372f073add)
 
 
