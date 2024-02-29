@@ -1,5 +1,5 @@
 import pygame
-
+import pydoc
 class PlayerSelectionScreen:
     
     """
@@ -47,4 +47,5 @@ class PlayerSelectionScreen:
             ValueError: If the selection is not within the valid range of player options.
         """
         return 
-    
+
+    pydoc.writedoc("PlayerSelectionScreen")

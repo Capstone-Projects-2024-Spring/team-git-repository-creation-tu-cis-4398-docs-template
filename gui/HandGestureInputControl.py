@@ -1,4 +1,5 @@
 import pygame
+import pydoc
 
 class HandGestureInputControl:
     """
@@ -46,3 +47,4 @@ class HandGestureInputControl:
         based on the current gesture, typically after mapping the gesture to a specific command or action.
         """
         pass
+pydoc.writedoc("HandGestureInputControl")

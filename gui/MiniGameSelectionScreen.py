@@ -1,5 +1,5 @@
 import pygame
-
+import pydoc
 class MiniGameSelectionScreen:
     """
     Represents a screen for selecting mini-games.
@@ -53,3 +53,5 @@ class MiniGameSelectionScreen:
         This method should ensure a clean exit from a game, including stopping any game loops and deallocating resources.
         """
         pygame.quit()
+
+pydoc.writedoc("MiniGameSelectionScreen")

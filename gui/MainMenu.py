@@ -1,4 +1,5 @@
 import pygame
+import pydoc
 class MainMenu:
 
     """
@@ -54,3 +55,4 @@ class MainMenu:
 
         return 
     
+pydoc.writedoc("MainMenu")
