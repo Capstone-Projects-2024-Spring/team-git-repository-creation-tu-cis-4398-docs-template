@@ -1,8 +1,12 @@
+/**
+ * Represents a user profile with statistics and preferences.
+ * @class
+ * @date 2/29/2024 - 10:18:36 AM
+ */
 class UserProfile {
   /**
    * Creates an instance of UserProfile.
-   * @constructor
-   * @param {Statistics} userStats - The statistics object for the user.
+   * @param {Object} userStats - The statistics object for the user.
    * @param {Object} preferences - The preferences set by the user.
    */
   constructor(userStats, preferences) {
@@ -12,7 +16,7 @@ class UserProfile {
 
   /**
    * Retrieves the user's statistics.
-   * @returns {Statistics} The statistics object.
+   * @returns {Object} The statistics object.
    */
   viewStatistics() {
     // Logic to retrieve and return user statistics
