@@ -34,14 +34,42 @@ class App:
         """
         self._app.run()
 
-
     @_app.route('/')
+    def index():
+        """
+        Handles initial welcome page rendering and session managing
+        :postcondition: if a session of user exists, the session is reflected on the page profile component.
+        :return : a rendered HTML content with/without session
+        """
+        pass
+
+    @_app.route('/login')
     def log_in():
         """
-        Handles the requests made to the welcome page where users can log in, register, or continue as guests
-        Postcondition: a new user will be registered with a message saying "Successfully registered" and the database will update with the new user
+        Handles the requests made to the welcome page where users can log in, register, or continue as guests 
+        :postcondition: a new user will be registered with a message saying "Successfully registered" and the database will update with the new user
         info, a message with "Incorrect username or password", or the user will be redirected to /menu
         :return : a Response object that redirects the user to the menu page on success, otherwise a str message appears saying either the username or password was incorrect
+        """
+        pass
+
+    @_app.route('/google-signin')
+    def googleLogin():
+        """
+        Handles the requests made to the website where users can log in to google
+        :postcondition: a google user login successfully
+        :return : a Response object that redirects the user to the callback method on success
+        """
+        pass
+
+    @_app.route('/google-logged')
+    def googleCallBack():
+        """
+        Handles the returned redirect requests from google signin
+        :postcondition: a new user will be registered with a message saying "Successfully registered" and the database will update with the new user
+        info, the user will be redirected to /menu
+        :postcondition: create the user session
+        :return : a Response object that redirects the user to the menu page
         """
         pass
 
@@ -75,7 +103,7 @@ class Database:
     Methods:
         __init__(app: App, **models)
             Initializes a Database instance with the provided Flask application and model classes.
-        insert(username: str, wpm: int = None, accuracy: float = None, wins: int = None, losses: int = None, freq_mistyped_words: str = None)
+        insert(username: str, psw: str, wpm: int = None, accuracy: float = None, wins: int = None, losses: int = None, freq_mistyped_words: str = None)
             Inserts a new user record into the database.
         update(username: str, **kwargs)
             Updates a user record in the database.
@@ -101,7 +129,7 @@ class Database:
         self._models = models
 
     @staticmethod
-    def insert(username: str, wpm: int = None, accuracy: float = None,
+    def insert(username: str, psw: str, wpm: int = None, accuracy: float = None,
                wins: int = None, losses: int = None,
                freq_mistyped_words: str = None):
         """
@@ -109,6 +137,8 @@ class Database:
 
         :param username: Unique identifier of the user.
         :type username: str
+        :param psw: password of the user
+        :type psw: String
         :param wpm: Words per minute. Defaults to None.
         :type wpm: int, optional
         :param accuracy: Percent of words typed correctly. Defaults to None.
@@ -122,8 +152,9 @@ class Database:
 
         :precondition: `username` must not be empty.
         :precondition: `username` must be unique.
+        :precondition: `psw` must not be empty.
         :precondition: If provided, `wpm`, `accuracy`, `wins`, `losses`, and `freq_mistyped_words` must be of the correct data types and within acceptable ranges.
-        :postcondition: If successful, a new user record is inserted into the database.
+        :postcondition: If successful, a new user record is inserted into the database with password hashed. 
         """
         pass
 
