@@ -75,7 +75,7 @@ class Database:
     Methods:
         __init__(app: App, **models)
             Initializes a Database instance with the provided Flask application and model classes.
-        insert(username: str, wpm: int = None, accuracy: float = None, wins: int = None, losses: int = None, freq_mistyped_words: str = None)
+        insert(username: str, psw: str, wpm: int = None, accuracy: float = None, wins: int = None, losses: int = None, freq_mistyped_words: str = None)
             Inserts a new user record into the database.
         update(username: str, **kwargs)
             Updates a user record in the database.
@@ -101,7 +101,7 @@ class Database:
         self._models = models
 
     @staticmethod
-    def insert(username: str, wpm: int = None, accuracy: float = None,
+    def insert(username: str, psd: str, wpm: int = None, accuracy: float = None,
                wins: int = None, losses: int = None,
                freq_mistyped_words: str = None):
         """
@@ -109,6 +109,8 @@ class Database:
 
         :param username: Unique identifier of the user.
         :type username: str
+        :param psw: password of the user
+        :type psw: String
         :param wpm: Words per minute. Defaults to None.
         :type wpm: int, optional
         :param accuracy: Percent of words typed correctly. Defaults to None.
@@ -122,8 +124,9 @@ class Database:
 
         :precondition: `username` must not be empty.
         :precondition: `username` must be unique.
+        :precondition: `psw` must not be empty.
         :precondition: If provided, `wpm`, `accuracy`, `wins`, `losses`, and `freq_mistyped_words` must be of the correct data types and within acceptable ranges.
-        :postcondition: If successful, a new user record is inserted into the database.
+        :postcondition: If successful, a new user record is inserted into the database with password hashed. 
         """
         pass
 
