@@ -14,37 +14,33 @@ class HandGestureInputControl:
 
     def __init__(self):
         """
-        Initializes the HandGestureInputControl class with default gesture.
+        Purpose: Initializes the HandGestureInputControl class with default gesture.
+        Post-conditions: The HandGestureInputControl object is created with the default gesture.
         """
         self.gesture = "up"
 
     def captureGesture(self):
         """
-        Captures and updates the current hand gesture.
-
-        This method should be implemented to capture hand gestures from the camera or sensor input,
-        and update the `self.gesture` attribute accordingly.
+        Purpose: Captures and updates the current hand gesture.
+        Post-conditions: The current hand gesture is updated.
         """
         pass
 
     def mapGestureToAction(self, gesture: str):
         """
-        Maps the captured hand gesture to a specific game action.
-
-        Args:
-            gesture (str): The hand gesture to map to an action.
-
-        This method should be implemented to define how different gestures correspond to different actions
-        within the game or application.
+        Purpose: Maps the captured hand gesture to a specific game action.
+        Pre-conditions: A hand gesture must be captured.
+        Post-conditions: The hand gesture is mapped to a game action.
+        Parameters:
+            - gesture (str): The hand gesture to map to an action.
         """
         pass
 
     def performClickAction(self):
         """
-        Performs a click action based on the current hand gesture.
-
-        This method should be implemented to perform actions, such as simulating a mouse click or pressing a button,
-        based on the current gesture, typically after mapping the gesture to a specific command or action.
+        Purpose: Performs a click action based on the current hand gesture.
+        Pre-conditions: A hand gesture must be captured and mapped to a game action.
+        Post-conditions: The click action is performed based on the current hand gesture.
         """
         pass
 pydoc.writedoc("HandGestureInputControl")

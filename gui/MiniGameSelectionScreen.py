@@ -26,31 +26,27 @@ class MiniGameSelectionScreen:
 
     def handleSelection(self, selection: str):
         """
-        Processes the user's selection of a mini-game.
-        
-        Args:
-            selection (str): The name of the selected mini-game.
-            
-        This method should determine what happens when a user selects a game, such as updating the UI or setting up game-specific data.
+        Purpose: Processes the user's selection of a mini-game.
+        Parameters:
+            - selection (str): The name of the selected mini-game.
         """
         pass
 
     def startSelectedGame(self, game: str):
         """
-        Starts the selected mini-game.
-        
-        Args:
-            game (str): The name of the game to start.
-            
-        This method should initialize and launch the selected mini-game.
+        Purpose: Starts the selected mini-game.
+        Pre-conditions: The game must be selected by the user.
+        Post-conditions: The selected mini-game is initialized and launched.
+        Parameters:
+            - game (str): The name of the game to start.
         """
         pass
 
     def exitGame(self):
         """
-        Exits the currently running mini-game and cleans up resources.
-        
-        This method should ensure a clean exit from a game, including stopping any game loops and deallocating resources.
+        Purpose: Exits the currently running mini-game and cleans up resources.
+        Pre-conditions: A mini-game must be running.
+        Post-conditions: Resources are cleaned up and the mini-game is exited.
         """
         pygame.quit()
 
