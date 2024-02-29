@@ -12,10 +12,6 @@ on:
 permissions:
   contents: read
 
-name: Python Unit Tests
-
-on: [push, pull_request]
-
 jobs:
   build:
     runs-on: ubuntu-latest
