@@ -36,3 +36,5 @@ class pygame:
         Post-condition: brings user back to menu screen.
         """
         return
+    
+pydoc.writedoc(pygame)
