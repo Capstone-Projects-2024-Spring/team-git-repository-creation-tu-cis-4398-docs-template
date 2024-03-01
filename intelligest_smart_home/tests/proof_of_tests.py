@@ -55,14 +55,26 @@ class TestAddNumbers(unittest.TestCase):
                                      'Locks', 'Reminders', 'To-do-List'])
         with self.assertRaises(TypeError):
             s.split(8)
-    
-
 
     def test_addition_string_input(self):
         with self.assertRaises(TypeError):
             add_numbers("Hello", "World")
 
+    def test_multiply_by_zero(self):
+        result = multiple_numbers(10, 0)
+        self.assertEqual(result, 0)
 
+    def test_multiply_negative_by_positive(self):
+        result = multiple_numbers(-5, 10)
+        self.assertEqual(result, -50)
+
+    def test_multiply_two_negatives(self):
+        result = multiple_numbers(-5, -10)
+        self.assertEqual(result, 50)
+
+    def test_multiply_with_one(self):
+        result = multiple_numbers(10, 1)
+        self.assertEqual(result, 10)
 
 if __name__ == '__main__':
     unittest.main()
