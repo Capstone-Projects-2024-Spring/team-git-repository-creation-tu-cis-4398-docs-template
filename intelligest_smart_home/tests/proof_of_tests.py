@@ -1,5 +1,5 @@
 import unittest
-from intelligest_smart_home.add_nums import add_numbers, subtract_numbers, divide_numbers
+from intelligest_smart_home.add_nums import add_numbers, subtract_numbers, multiple_numbers, divide_numbers
 
 class TestAddNumbers(unittest.TestCase):
     def test_addition(self):
@@ -42,6 +42,10 @@ class TestAddNumbers(unittest.TestCase):
         result = subtract_numbers(9284, 9053)
         self.assertEqual(result, 231)
 
+    def test_multiple_decimals(self):
+        result = multiple_numbers(8.46, 47.4)
+        self.assertEqual(result, 401.004)
+
     def test_divide_floating_point_numbers(self):
         self.assertAlmostEqual(divide_numbers(1, 3), 0.333, places=3)
 
@@ -52,8 +56,7 @@ class TestAddNumbers(unittest.TestCase):
         with self.assertRaises(TypeError):
             s.split(8)
     
-    def test_divide_floating_point_numbers(self):
-        self.assertAlmostEqual(divide(1, 3), 0.333, places=3)
+
 
     def test_addition_string_input(self):
         with self.assertRaises(TypeError):
