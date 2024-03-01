@@ -34,6 +34,10 @@ class TestAddNumbers(unittest.TestCase):
         result = add_numbers(10, 2.5)
         self.assertAlmostEqual(result, 12.5)
 
+    def test_add_fractions(self):
+        result = add_numbers(55/100, 45/100)
+        self.assertEqual(result, 1)
+
     def test_addition_string_input(self):
         with self.assertRaises(TypeError):
             add_numbers("Hello", "World")
