@@ -38,9 +38,26 @@ class TestAddNumbers(unittest.TestCase):
         result = add_numbers(55/100, 45/100)
         self.assertEqual(result, 1)
 
+    def test_add_mixed_types(self):
+        result = subtract_numbers()
+
+    def test_divide_floating_point_numbers(self):
+        self.assertAlmostEqual(divide(1, 3), 0.333, places=3)
+
+    def test_split_devices(self):
+        s = 'TV Lights Alarm Weather Thermostat Locks Reminders To-do-List'
+        self.assertEqual(s.split(), ['TV', 'Lights', 'Alarm', 'Weather', 'Thermostat', 
+                                     'Locks', 'Reminders', 'To-do-List'])
+        with self.assertRaises(TypeError):
+            s.split(8)
+    
+    def test_divide_floating_point_numbers(self):
+        self.assertAlmostEqual(divide(1, 3), 0.333, places=3)
+
     def test_addition_string_input(self):
         with self.assertRaises(TypeError):
             add_numbers("Hello", "World")
+
 
 
 if __name__ == '__main__':
