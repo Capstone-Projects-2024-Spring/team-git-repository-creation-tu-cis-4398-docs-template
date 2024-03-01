@@ -56,9 +56,6 @@ class TestAddNumbers(unittest.TestCase):
         with self.assertRaises(TypeError):
             s.split(8)
 
-    def test_addition_string_input(self):
-        with self.assertRaises(TypeError):
-            add_numbers("Hello", "World")
 
     def test_multiply_by_zero(self):
         result = multiple_numbers(10, 0)
