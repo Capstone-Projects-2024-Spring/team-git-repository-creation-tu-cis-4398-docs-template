@@ -21,7 +21,7 @@ test_get_endpoints(client)
 
 ##### Test: POST HTTP request to RESTFul API for processing user input.
 `
-test_post_user_input()
+test_post_user_input(client)
 `
 - Assertions:
     - HTTP response status of 200 for sucessful request
