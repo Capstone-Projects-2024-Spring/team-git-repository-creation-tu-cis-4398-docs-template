@@ -67,39 +67,69 @@ Method +execute_automation()
 
 Method +send_command()
 def test_send_command(self):
-        # Stubbing external classes
         home_assistant = Mock()
         user_interface = UserInterface(home_assistant)
         
-        # Input parameters
         command = "Turn on TV"
         
-        # Expected results
         expected_command_sent = True
         
-        # Method execution
         result = user_interface.send_command(command)
         
-        # Assertion
         self.assertEqual(result, expected_command_sent)
 
 
 Method +display_device_state():
 def test_display_device_state(self):
-        # Stubbing external classes
         home_assistant = Mock()
         user_interface = UserInterface(home_assistant)
         home_assistant.devices = {"TV": Mock()}
-        
-        # Input parameters
+
         device_name = "TV"
         device_state = "ON"
         
-        # Expected results
         expected_device_state_displayed = True
         
-        # Method execution
         result = user_interface.display_device_state(device_name, device_state)
         
-        # Assertion
         self.assertEqual(result, expected_device_state_displayed)    
+
+
+## Class Device 
+
+Method +update_status():
+def test_update_status(self):
+        # Stubbing external classes
+        device = Device("123", "Light")
+        
+        # Input parameters
+        new_status = "ON"
+        
+        # Expected results
+        expected_status_updated = True
+        
+        # Method execution
+        result = device.update_status(new_status)
+        
+        # Assertion
+        self.assertEqual(result, expected_status_updated)
+        self.assertEqual(device.status, new_status)
+
+Method +execute_capability():
+
+def test_execute_capability(self):
+        # Stubbing external classes
+        device = Device("456", "Thermostat")
+        
+        # Input parameters
+        capability = "SetTemperature"
+        value = 23
+        
+        # Expected results
+        expected_capability_executed = True
+        
+        # Method execution
+        result = device.execute_capability(capability, value)
+        
+        # Assertion
+        self.assertEqual(result, expected_capability_executed)
