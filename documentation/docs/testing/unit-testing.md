@@ -208,3 +208,22 @@ Method +capture_image():
 
         self.assertEqual(result, expected_image_captured)
         python_scripts.preprocess_image.assert_called_once()
+
+## Class TPU 
+
+Method +load_model():
+    def test_load_model(self):
+        tpu = TPU()
+        expected_model_loaded = True
+        result = tpu.load_model()
+
+        self.assertEqual(result, expected_model_loaded)
+
+Method +make_prediction():
+    def test_make_prediction(self):
+        tpu = TPU()
+        preprocessed_image = Mock()
+        expected_prediction = "A"
+        prediction = tpu.make_prediction(preprocessed_image)
+        
+        self.assertEqual(prediction, expected_prediction)
