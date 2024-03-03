@@ -66,7 +66,7 @@ Method +execute_automation()
 ## Class User Interface:
 
 Method +send_command()
-def test_send_command(self):
+    def test_send_command(self):
         home_assistant = Mock()
         user_interface = UserInterface(home_assistant)
         
@@ -80,7 +80,7 @@ def test_send_command(self):
 
 
 Method +display_device_state():
-def test_display_device_state(self):
+    def test_display_device_state(self):
         home_assistant = Mock()
         user_interface = UserInterface(home_assistant)
         home_assistant.devices = {"TV": Mock()}
@@ -98,38 +98,61 @@ def test_display_device_state(self):
 ## Class Device 
 
 Method +update_status():
-def test_update_status(self):
-        # Stubbing external classes
+    def test_update_status(self):
         device = Device("123", "Light")
-        
-        # Input parameters
         new_status = "ON"
-        
-        # Expected results
         expected_status_updated = True
         
-        # Method execution
         result = device.update_status(new_status)
         
-        # Assertion
         self.assertEqual(result, expected_status_updated)
         self.assertEqual(device.status, new_status)
 
 Method +execute_capability():
-
-def test_execute_capability(self):
-        # Stubbing external classes
+    def test_execute_capability(self):
         device = Device("456", "Thermostat")
-        
-        # Input parameters
         capability = "SetTemperature"
         value = 23
-        
-        # Expected results
+
         expected_capability_executed = True
         
-        # Method execution
         result = device.execute_capability(capability, value)
-        
-        # Assertion
         self.assertEqual(result, expected_capability_executed)
+
+
+## Class PythonScripts:
+
+Method +load_model():
+    def test_load_model(self):
+        python_scripts = PythonScripts()
+        model_path = "model.tflite"
+        expected_model_loaded = True
+        
+        result = python_scripts.load_model(model_path)
+        self.assertEqual(result, expected_model_loaded)
+
+Method +capture_image():
+    def test_capture_image(self):
+        python_scripts = PythonScripts()
+        expected_image_captured = True
+    
+        result = python_scripts.capture_image()
+        self.assertEqual(result, expected_image_captured)
+
+Method +preprocess_image():
+    def test_preprocess_image(self):
+        python_scripts = PythonScripts()
+        image = Mock()
+        expected_image_preprocessed = True
+
+        result = python_scripts.preprocess_image(image)
+        self.assertEqual(result, expected_image_preprocessed)
+
+Method +make_prediction():
+    def test_make_prediction(self):
+        python_scripts = PythonScripts()
+        image = Mock()
+        expected_prediction = "A"
+        prediction = python_scripts.make_prediction(image)
+        
+        self.assertEqual(prediction, expected_prediction)
