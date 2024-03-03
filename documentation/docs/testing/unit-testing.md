@@ -242,6 +242,7 @@ Method +make_prediction():
 
         home_assistant.update_device_status.assert_called_once()
 
+
 ## Use Case 2: Weather seeking through Gestures
 
         def test_weather_seeking_integration(self):
@@ -256,6 +257,7 @@ Method +make_prediction():
         user_interface.display_processing.assert_called_once()
 
         user_interface.display_weather_info.assert_called_once()
+
 
 ## Use Case 3: Changing the Kitchen Light Color
 
@@ -272,5 +274,26 @@ Method +make_prediction():
 
         user_interface.display_processing.assert_called_once()
         home_assistant.update_device_status.assert_called_once_with("Kitchen Light", "Yellow")
+
+
+## Use Case 4 "Smart lock setup and control"
+
+    def test_smart_lock_setup_and_control_integration(self):
+        home_assistant = Mock(spec=HomeAssistant)
+        user_interface = Mock(spec=UserInterface)
+        python_scripts = Mock(spec=PythonScripts)
+        tpu = Mock(spec=TPU)
+
+        intelligest_home = IntelliGestHome(home_assistant, user_interface, python_scripts, tpu)
+        smart_lock = Mock()
+        intelligest_home.connect_device(smart_lock)
+
+        user_interface.display_device_state.assert_called_once_with("Smart Lock", "Locked")
+        intelligest_home.perform_action("Unlock Smart Lock")
+        home_assistant.update_device_status.assert_called_once_with("Smart Lock", "Unlocked")
+        intelligest_home.perform_action("Lock Smart Lock")
+        home_assistant.update_device_status.assert_called_with("Smart Lock", "Locked")
+
+
 
 
