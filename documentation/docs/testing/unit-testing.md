@@ -156,3 +156,38 @@ Method +make_prediction():
         prediction = python_scripts.make_prediction(image)
         
         self.assertEqual(prediction, expected_prediction)
+
+## Class JavaScript Custom Cards
+Method +create_card(): 
+    def test_create_card(self):
+        javascript_custom_cards = JavaScriptCustomCards()
+        card_id = "asl_card"
+        expected_card_created = True
+
+        result = javascript_custom_cards.create_card(card_id)
+        self.assertEqual(result, expected_card_created)
+
+Method +display_image():
+    def test_display_image(self):
+
+        javascript_custom_cards = JavaScriptCustomCards()
+        card_id = "asl_card"
+
+        image_url = "https://example.com/asl_image.jpg"
+
+        expected_image_displayed = True
+    
+        result = javascript_custom_cards.display_image(card_id, image_url)
+    
+        self.assertEqual(result, expected_image_displayed)
+
+Method +update_display_state():
+    def test_update_display_state(self):
+        javascript_custom_cards = JavaScriptCustomCards()
+        card_id = "asl_card"
+        new_display_state = "show"
+        expected_display_state_updated = True
+        
+        result = javascript_custom_cards.update_display_state(card_id, new_display_state)
+        
+        self.assertEqual(result, expected_display_state_updated)
