@@ -191,3 +191,20 @@ Method +update_display_state():
         result = javascript_custom_cards.update_display_state(card_id, new_display_state)
         
         self.assertEqual(result, expected_display_state_updated)
+
+
+## Class Camera
+
+Method +capture_image():
+    def test_capture_image(self):
+
+        camera = Camera()
+        python_scripts = Mock()
+        camera.python_scripts = python_scripts
+        
+        expected_image_captured = True
+
+        result = camera.capture_image()
+
+        self.assertEqual(result, expected_image_captured)
+        python_scripts.preprocess_image.assert_called_once()
