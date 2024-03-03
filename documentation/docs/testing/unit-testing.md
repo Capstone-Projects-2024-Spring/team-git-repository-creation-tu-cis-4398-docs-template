@@ -61,3 +61,45 @@ Method +execute_automation()
         result = home_assistant.execute_automation(device_name, automation)
         
         self.assertEqual(result, expected_automation_executed)
+
+
+## Class User Interface:
+
+Method +send_command()
+def test_send_command(self):
+        # Stubbing external classes
+        home_assistant = Mock()
+        user_interface = UserInterface(home_assistant)
+        
+        # Input parameters
+        command = "Turn on TV"
+        
+        # Expected results
+        expected_command_sent = True
+        
+        # Method execution
+        result = user_interface.send_command(command)
+        
+        # Assertion
+        self.assertEqual(result, expected_command_sent)
+
+
+Method +display_device_state():
+def test_display_device_state(self):
+        # Stubbing external classes
+        home_assistant = Mock()
+        user_interface = UserInterface(home_assistant)
+        home_assistant.devices = {"TV": Mock()}
+        
+        # Input parameters
+        device_name = "TV"
+        device_state = "ON"
+        
+        # Expected results
+        expected_device_state_displayed = True
+        
+        # Method execution
+        result = user_interface.display_device_state(device_name, device_state)
+        
+        # Assertion
+        self.assertEqual(result, expected_device_state_displayed)    
