@@ -276,7 +276,7 @@ Method +make_prediction():
         home_assistant.update_device_status.assert_called_once_with("Kitchen Light", "Yellow")
 
 
-## Use Case 4 "Smart lock setup and control"
+## Use Case 4: Smart lock setup and control
 
     def test_smart_lock_setup_and_control_integration(self):
         home_assistant = Mock(spec=HomeAssistant)
@@ -293,6 +293,81 @@ Method +make_prediction():
         home_assistant.update_device_status.assert_called_once_with("Smart Lock", "Unlocked")
         intelligest_home.perform_action("Lock Smart Lock")
         home_assistant.update_device_status.assert_called_with("Smart Lock", "Locked")
+
+
+## Use Case 5: Adding reminders through Gestures
+
+    def test_reminder_addition_integration(self):
+        home_assistant = Mock(spec=HomeAssistant)
+        user_interface = Mock(spec=UserInterface)
+        python_scripts = Mock(spec=PythonScripts)
+        tpu = Mock(spec=TPU)
+
+        intelligest_home = IntelliGestHome(home_assistant, user_interface, python_scripts, tpu)
+
+        gesture = "Gesture for adding reminder"
+        intelligest_home.detect_gesture(gesture)
+
+        user_interface.display_feedback.assert_called_once()
+        user_interface.display_processing.assert_called_once()
+
+        reminder_text = "Buy a couple of Milk Gallons"
+        python_scripts.make_prediction.return_value = reminder_text
+
+        user_interface.ask_for_confirmation.assert_called_once_with(reminder_text)
+
+        confirmed = True
+        intelligest_home.confirm_action(confirmed)
+        python_scripts.add_reminder.assert_called_once_with(reminder_text)
+
+
+## Use Case 6: Temperature adjustment with ASL
+
+    def test_temperature_adjustment_integration(self):
+
+        home_assistant = Mock(spec=HomeAssistant)
+        user_interface = Mock(spec=UserInterface)
+        python_scripts = Mock(spec=PythonScripts)
+        tpu = Mock(spec=TPU)
+
+        intelligest_home = IntelliGestHome(home_assistant, user_interface, python_scripts, tpu)
+
+        gesture = "Gesture for adjusting temperature"
+        intelligest_home.detect_gesture(gesture)
+        user_interface.display_feedback.assert_called_once()
+        user_interface.display_processing.assert_called_once()
+
+        temperature_change = "Hotter"
+        python_scripts.make_prediction.return_value = temperature_change
+
+        home_assistant.execute_automation.assert_called_once_with("Temperature Control", temperature_change)
+
+        user_interface.display_confirmation.assert_called_once()
+
+
+## Use Case 7: Changing Channels
+
+    def test_tv_channel_change_integration(self):
+        home_assistant = Mock(spec=HomeAssistant)
+        user_interface = Mock(spec=UserInterface)
+        python_scripts = Mock(spec=PythonScripts)
+        tpu = Mock(spec=TPU)
+
+        intelligest_home = IntelliGestHome(home_assistant, user_interface, python_scripts, tpu)
+
+        gesture = "Gesture for turning on TV"
+        intelligest_home.detect_gesture(gesture)
+        user_interface.display_feedback.assert_called_once()
+
+        user_interface.display_processing.assert_called_once()
+
+        channel = "Channel to be turned on"
+        python_scripts.make_prediction.return_value = channel
+
+        home_assistant.execute_automation.assert_called_once_with("TV Control", channel)
+        user_interface.display_confirmation.assert_called_once()
+
+
 
 
 
