@@ -257,4 +257,20 @@ Method +make_prediction():
 
         user_interface.display_weather_info.assert_called_once()
 
+## Use Case 3: Changing the Kitchen Light Color
+
+    def test_kitchen_light_color_change_integration(self):
+        home_assistant = Mock(spec=HomeAssistant)
+        user_interface = Mock(spec=UserInterface)
+        python_scripts = Mock(spec=PythonScripts)
+        tpu = Mock(spec=TPU)
+        intelligest_home = IntelliGestHome(home_assistant, user_interface, python_scripts, tpu)
+
+        gesture = "Gesture for changing kitchen light color"
+        intelligest_home.detect_gesture(gesture)
+        user_interface.display_feedback.assert_called_once()
+
+        user_interface.display_processing.assert_called_once()
+        home_assistant.update_device_status.assert_called_once_with("Kitchen Light", "Yellow")
+
 
