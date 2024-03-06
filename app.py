@@ -45,7 +45,7 @@ class App:
         pass
 
     @_app.route('/google-signin')
-    def googleLogin():
+    def google_login():
         """
         Handles the requests made to the website where users can log in to google
         :postcondition: a google user login successfully
@@ -54,7 +54,7 @@ class App:
         pass
 
     @_app.route('/google-logged')
-    def googleCallBack():
+    def google_callback():
         """
         Handles the returned redirect requests from google signin
         :postcondition: a new user will be registered with a message saying "Successfully registered" and the database will update with the new user
