@@ -42,3 +42,10 @@ class Test_App():
         Result: True if the returned response indicates a redirection to the menu page
         """
         pass
+
+    def test_menu_selection():
+        """
+        Test: That the user is redirected to the page with the selected game mode
+        Result: True if the number corresponding to the selected game mode appears in the returned redirect response
+        """
+        pass
