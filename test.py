@@ -49,3 +49,10 @@ class Test_App():
         Result: True if the number corresponding to the selected game mode appears in the returned redirect response
         """
         pass
+
+    def test_game_results():
+        """
+        Test: That text for the game results appears on the screen
+        Result: True if a string with game results is returned
+        """
+        pass
