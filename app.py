@@ -45,7 +45,7 @@ class App:
         pass
 
     @_app.route('/google-signin')
-    def google_login():
+    def google_login()->Response:
         """
         Handles the requests made to the website where users can log in to google
         :postcondition: a google user login successfully
@@ -201,7 +201,7 @@ class UserData(App.db.Model):
 
     def repr():
         """
-        Returns a string representation of the user
+        Returns a string representation of the user data
         :return :
         """
         pass
