@@ -35,15 +35,6 @@ class App:
         self._app.run()
 
     @_app.route('/')
-    def index():
-        """
-        Handles initial welcome page rendering and session managing
-        :postcondition: if a session of user exists, the session is reflected on the page profile component.
-        :return : a rendered HTML content with/without session
-        """
-        pass
-
-    @_app.route('/login')
     def log_in():
         """
         Handles the requests made to the welcome page where users can log in, register, or continue as guests 
