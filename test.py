@@ -25,6 +25,20 @@ class Test_App():
     def test_continue_as_guest():
         """
         Test: When users click continue as guest, a response should be generated which redirects the user to the game page
-        Result: True if the response indicates a redirection to the game page
+        Result: True if the returned response indicates a redirection to the menu page
+        """
+        pass
+
+    def test_google_login():
+        """
+        Test: When users tries to log in through Google and is successful, a response should be generated which redirects the user to the google callback page 
+        Result: True if the returned response indicates a redirection to the google callback page
+        """
+        pass
+
+    def test_google_callback():
+        """
+        Test: That returned redirect requests are handled successfully, and ultimately a response that indicates redirection to the menu page is returned
+        Result: True if the returned response indicates a redirection to the menu page
         """
         pass
