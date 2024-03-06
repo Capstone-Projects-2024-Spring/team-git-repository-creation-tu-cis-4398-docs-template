@@ -56,3 +56,10 @@ class Test_App():
         Result: True if a string with game results is returned
         """
         pass
+
+class Test_User_Data():
+    def test_repr():
+        """
+        Test: That a string representation of a row's data is returned
+        Result: True if a string with a row's data is returned
+        """
