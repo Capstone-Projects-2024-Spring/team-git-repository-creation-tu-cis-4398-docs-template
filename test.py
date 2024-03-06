@@ -63,3 +63,4 @@ class Test_User_Data():
         Test: That a string representation of a row's data is returned
         Result: True if a string with a row's data is returned
         """
+        pass
