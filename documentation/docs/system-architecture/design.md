@@ -63,9 +63,7 @@ A new Philadelphia resident wants to find out informaiton about farmers markets 
 <li>PhillyGPT provides the user with the date and time about the specific farmers market they want to visit.</li>  
 </ol>
 
-NOTE: Use case was changed. Will update new Sequence Diagram.
-
-![Use Case 3](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/0ae8c8b5-a8ac-4839-910a-6e207bb9f322)
+![Use Case 3](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/263afd3f-ba09-4ab6-a6f8-bb44b362ad39)
 
 <h3>Use Case 4 - Location Analysis</h3>
 
