@@ -53,16 +53,17 @@ A user wants to find view a heat map of violent crime within North Philadelphia 
 
 ![Use Case 2](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/b651f786-a01d-415f-b20c-c369d73c1d66)
 
-<h3>Use Case 3 - Foot Traffic Identification</h3>
+<h3>Use Case 3 - Finding a Farmers Market</h3>
 
-A small business owner is considering opening a new restaurant in Philadelphia and want to identify the neighborhoods with the highest foot traffic
+A new Philadelphia resident wants to find out informaiton about farmers markets in the city.
 <ol>
-<li>The business owner goes to the PhillyGPT website and input a prompt asking for foot traffic data.</li>
-<li>The website provides the business owner with a heatmap showing areas of high foot traffic based on various parameters such as commercial activity and popular density.</li>
-<li>Using this information, the business owner can make informed decisions about the location of his/her restaurant.</li>
+<li>The user goes to the PhillyGPT website and inputs a prompt asking for information about the farmers markets.</li>
+<li>PhillyGPT provides the user with the names and locations about various Philadelphia farmer markets. </li>
+<li>The user then asks PhillyGPT about the time and date about a specific farmers market location.</li>
+<li>PhillyGPT provides the user with the date and time about the specific farmers market they want to visit.</li>  
 </ol>
 
-![Use Case 3](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/0ae8c8b5-a8ac-4839-910a-6e207bb9f322)
+![Use Case 3](https://github.com/Capstone-Projects-2024-Spring/project-phillygpt/assets/76089708/263afd3f-ba09-4ab6-a6f8-bb44b362ad39)
 
 <h3>Use Case 4 - Location Analysis</h3>
 
