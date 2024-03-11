@@ -23,7 +23,7 @@ A user wants to find view a heat map of violent crime within North Philadelphia 
 <li>The website displays a heat map showing the number of violent crimes committed in North Philadelphia in 2022</li>
 </ol>
 
-<h3>Use Case 3 - Finding a Farmer's Market</h3>
+<h3>Use Case 3 - Finding a Farmers Market</h3>
 
 A new Philadelphia resident wants to find out informaiton about farmers markets in the city.
 <ol>
