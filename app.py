@@ -35,15 +35,6 @@ class App:
         self._app.run()
 
     @_app.route('/')
-    def index():
-        """
-        Handles initial welcome page rendering and session managing
-        :postcondition: if a session of user exists, the session is reflected on the page profile component.
-        :return : a rendered HTML content with/without session
-        """
-        pass
-
-    @_app.route('/login')
     def log_in():
         """
         Handles the requests made to the welcome page where users can log in, register, or continue as guests 
@@ -54,7 +45,7 @@ class App:
         pass
 
     @_app.route('/google-signin')
-    def googleLogin():
+    def google_login()->Response:
         """
         Handles the requests made to the website where users can log in to google
         :postcondition: a google user login successfully
@@ -63,7 +54,7 @@ class App:
         pass
 
     @_app.route('/google-logged')
-    def googleCallBack():
+    def google_callback():
         """
         Handles the returned redirect requests from google signin
         :postcondition: a new user will be registered with a message saying "Successfully registered" and the database will update with the new user
@@ -210,7 +201,7 @@ class UserData(App.db.Model):
 
     def repr():
         """
-        Returns a string representation of the user
+        Returns a string representation of the user data
         :return :
         """
         pass
