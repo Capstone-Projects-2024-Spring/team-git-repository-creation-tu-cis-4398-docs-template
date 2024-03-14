@@ -155,3 +155,39 @@ describe('Leaderboard', () => {
         });
     });
 });
+
+// UserAuthentication
+
+const UserAuthentication = require('./UserAuthentication');
+
+describe('UserAuthentication', () => {
+    let userAuth;
+
+    beforeEach(() => {
+        // Initialize UserAuthentication instance with a sample backend service URL
+        userAuth = new UserAuthentication('Website');
+    });
+
+    describe('Login', () => {
+        test('Should log in a user', () => {
+            const username = 'testuser';
+            const password = 'password';
+            // Test implementation...
+        });
+    });
+
+    describe('Register', () => {
+        test('Should register a new user', () => {
+            const username = 'newuser';
+            const email = 'newuser@example.com';
+            const password = 'password';
+            // Test implementation...
+        });
+    });
+
+    describe('ContinueAsGuest', () => {
+        test('Should allow the user to continue as a guest', () => {
+            // Test implementation...
+        });
+    });
+});
