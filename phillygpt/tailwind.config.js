@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors :{
-        'gray-navbar' : '#545454'
+        'gray-navbar' : '#545454',
+        'darkgray' : '#333333',
       }
     },
   },

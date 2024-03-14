@@ -3,7 +3,9 @@ import Navbar from './components/navbar.jsx';
 
 function App() {
   return (
-    <Navbar />
+    <div className="bg-darkgray min-h-screen">
+      <Navbar />
+    </div>
   );
 }
 
