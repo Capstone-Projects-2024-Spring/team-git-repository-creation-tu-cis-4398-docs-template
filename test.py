@@ -101,7 +101,7 @@ class Test_Game():
         pass
 
     def test_race_end():
-         """
+        """
         Test: Ensure that the race is ended and necessary cleanup actions are performed
         Result: True if all cleanup actions are successfully executed
         """
