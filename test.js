@@ -1,5 +1,7 @@
 // Frontend Tests
 
+// Cosmetics
+
 const Cosmetics = require('./Cosmetics');
 
 describe('Cosmetics', () => {
@@ -38,4 +40,24 @@ describe('Cosmetics', () => {
     });
   });
 
+});
+
+// DynamicTextGen
+
+const DynamicTextGen = require('./DynamicTextGen');
+
+describe('DynamicTextGen', () => {
+    let dynamicTextGen;
+  
+    beforeEach(() => {
+        dynamicTextGen = new DynamicTextGen(['Pattern 1', 'Pattern 2', 'Pattern 3']);
+    });
+  
+    describe('GenerateText', () => {
+        test('Should generate dynamic text based on predefined patterns', () => {
+            const generatedText = dynamicTextGen.generateText();
+            // How the text should be generated
+            expect(typeof generatedText).toBe('string');
+        });
+    });
 });
