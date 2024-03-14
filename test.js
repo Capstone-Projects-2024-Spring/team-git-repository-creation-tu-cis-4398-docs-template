@@ -130,3 +130,28 @@ describe('KeyboardAnimation', () => {
 
 });
 
+// Leaderboard
+
+const Leaderboard = require('./Leaderboard');
+
+describe('Leaderboard', () => {
+    let leaderboard;
+
+    beforeEach(() => {
+        // Initialize Leaderboard instance with sample player ranks
+        leaderboard = new Leaderboard([10, 20, 30, 40, 50]);
+    });
+
+    describe('UpdateLeaderboard', () => {
+        test('Should update the leaderboard with a new player\'s rank', () => {
+            // Test implementation...
+        });
+    });
+
+  describe('ViewTopPlayers', () => {
+        test('Should retrieve the top players from the leaderboard', () => {
+            const topPlayers = leaderboard.viewTopPlayers();
+            // Test implementation...
+        });
+    });
+});
