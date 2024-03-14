@@ -1,6 +1,7 @@
-export default function Navbar() {
+import React from 'react';
+
+function Navbar() {
     return (
-        // Using Tailwind CSS to replicate the style
         <nav className="bg-gray-navbar text-white text-xl flex justify-between items-center gap-4 p-2">
             <ul className="flex space-x-12 m-0 p-0 list-none">
                 <li className="hover:bg-gray-600 p-2">
@@ -16,3 +17,5 @@ export default function Navbar() {
         </nav>
     );
 }
+
+export default Navbar;
