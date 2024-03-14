@@ -44,7 +44,7 @@ describe('Cosmetics', () => {
 
 // DynamicTextGen
 
-const DynamicTextGen = require('./DynamicTextGen');
+const DynamicTextGen = require('./Dynamic_Text_Gen');
 
 describe('DynamicTextGen', () => {
     let dynamicTextGen;
@@ -58,6 +58,54 @@ describe('DynamicTextGen', () => {
             const generatedText = dynamicTextGen.generateText();
             // How the text should be generated
             expect(typeof generatedText).toBe('string');
+        });
+    });
+});
+
+// Gamemodes
+
+const GameModes = require('./Game_Modes');
+
+describe('GameModes', () => {
+    let gameModes;
+  
+    beforeEach(() => {
+        // Initialize GameModes instance
+        gameModes = new GameModes();
+    });
+  
+    describe('SinglePlayerMode', () => {
+        test('Should start a single-player game session', () => {
+            const gameSession = gameModes.singlePlayerMode();
+            // Test implementation...
+      });
+    });
+  
+    describe('MultiplayerMode', () => {
+        test('Should start a multiplayer game session', () => {
+            const gameSession = gameModes.multiplayerMode();
+            // Test implementation...
+        });
+    });
+  
+    describe('PracticeMode', () => {
+        test('Should start a practice game session', () => {
+            const gameSession = gameModes.practiceMode();
+            // Test implementation...
+        });
+    });
+  
+    describe('DynamicRace', () => {
+        test('Should start a dynamic race game session', () => {
+            const gameSession = gameModes.dynamicRace();
+            // Test implementation...
+        });
+    });
+  
+    describe('RobotOpponentMode', () => {
+        test('Should start a game session against a robot opponent', () => {
+            const gameSession = gameModes.robotOpponentMode();
+            // Test implementation...
         });
     });
 });
