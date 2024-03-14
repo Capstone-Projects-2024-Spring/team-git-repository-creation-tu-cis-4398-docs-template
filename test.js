@@ -109,3 +109,24 @@ describe('GameModes', () => {
         });
     });
 });
+
+// KeyboardAnimation
+
+const KeyboardAnimation = require('./KeyboardAnimation');
+
+describe('KeyboardAnimation', () => {
+    let keyboardAnimation;
+
+    beforeEach(() => {
+        // Initialize KeyboardAnimation instance with a sample key press
+        keyboardAnimation = new KeyboardAnimation('A');
+    });
+
+    describe('DisplayAnimation', () => {
+        test('Should display keyboard animation for the pressed key', () => {
+            // Test implementation...
+        });
+    });
+
+});
+
