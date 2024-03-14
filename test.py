@@ -105,7 +105,7 @@ class Test_Game():
         Test: Ensure that the race is ended and necessary cleanup actions are performed
         Result: True if all cleanup actions are successfully executed
         """
-         pass
+        pass
     
     def test_add_player():
         """
@@ -119,4 +119,4 @@ class Test_Game():
         Test: Ensure that a player is removed from the game session successfully
         Result: True if the player is removed and cannot be retrieved from the game session
         """
-        pass
+    
