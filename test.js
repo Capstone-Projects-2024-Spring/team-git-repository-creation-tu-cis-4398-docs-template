@@ -191,3 +191,45 @@ describe('UserAuthentication', () => {
         });
     });
 });
+
+// Game Sesion
+
+const game_sesion = require('./game_sesion');
+
+describe('game_sesion', () => {
+    beforeEach(() => {
+        // Reset currentText and userInput before each test
+        game_sesion.currentText = "";
+        game_sesion.userInput = "";
+    });
+
+    describe('StartGame', () => {
+        test('Should initialize variables and display the system', () => {
+            // Test implementation...
+        });
+    });
+
+    describe('endGame', () => {
+        test('should perform close cases for the system', () => {
+            // Test implementation...
+        });
+    });
+
+    describe('calculateWPM', () => {
+        test('should calculate words per minute (WPM)', () => {
+            // Set up currentText and userInput for testing idk...
+            game_sesion.currentText = "I can sort of type really fast.";
+            game_sesion.userInput = "I can type really fast.";
+            // Test implementation...
+        });
+    });
+
+    describe('calculateAccuracy', () => {
+        test('should calculate accuracy percentage', () => {
+            // Set up currentText and userInput for testing idk...
+            game_sesion.currentText = "I can sort of type really fast.";
+            game_sesion.userInput = "I can type really fast.";
+            // Test implementation...
+        });
+    });
+});
