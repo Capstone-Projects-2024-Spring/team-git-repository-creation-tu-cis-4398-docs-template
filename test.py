@@ -120,3 +120,45 @@ class Test_Game():
         Result: True if the player is removed and cannot be retrieved from the game session
         """
         pass
+
+class Test_Player():
+    '''
+    Class for testing the player class
+    '''
+    # Client that sends requests to endpoints of the application
+    client = FlaskClient()
+
+    def test_initialization():
+        """
+        Test: A new player metric structure is created which holds key metrics of the player through the duration of the match
+        Result: True if the returned player metric structure is not None and has a unique id
+        """
+        pass
+
+    def test_update_wpm():
+        """
+        Test: Ensure that the real time words per minute is properly updated
+        Result: True if words per minute metric updates accordingly during the lifespan of the match
+        """
+        pass
+
+    def test_update_accuracy():
+        """
+        Test: Ensure that real time accuracy is accurately updated
+        Result: True if accuracy metric matches up with current accuracy metric on game
+        """
+        pass
+
+    def test_update_freq_mistyped():
+        """
+        Test: Ensure that the list of frequently mistyped words is properly updated with the new list
+        Result: True if new list matches up with the current version of the list that stores frequently mistyped words
+        """
+        pass
+
+    def test_update_score():
+         """
+        Test: Ensure that the updated score matches up with the current score
+        Result: True if current score and updated score match
+        """
+         pass
