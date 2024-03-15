@@ -1,18 +1,28 @@
 // Frontend Tests
 
-// Cosmetics
+
+
+
+// Cosmetics class 
 
 const Cosmetics = require('./Cosmetics');
 
 describe('Cosmetics', () => {
+
+    //initialize instance 
     let cosmetics;
 
     beforeEach(() => {
-        cosmetics = new Cosmetics(['theme1', 'theme2', 'theme3']);
+    
+    // created sample thems of new instances 
+    
+        const themes = ['theme1', 'theme2', 'theme3'];
+        cosmetics = new Cosmetics(themes);
     });
 
-    describe('changeTheme', () => {
-    // Test cases for changeTheme method
+    describe('Change_Theme', () => {
+        // Test cases for changeTheme method
+
         test('Should change the theme of cosmetics', () => {
             // Test implementation...
         });
@@ -22,45 +32,58 @@ describe('Cosmetics', () => {
         });
     });
 
-    describe('EarnPoints', () => {
-    // Test cases for earnPoints method
+    describe('Earn_Points', () => {
+        // Test cases for earnPoints method
+
         test('Should add earned points to the user profile', () => {
             // Test implementation...
         });
     });
 
-    describe('SpendPoints', () => {
-    // Test cases for spendPoints method
+    describe('Spend_Points', () => {
+        // Test cases for spendPoints method
+
         test('Should deduct spent points from the user profile', () => {
             // Test implementation...
-    });
+        });
 
-    test('Should not allow spending points if the user does not have enough points', () => {
-        // Test implementation...
+        test('Should not allow spending points if the user does not have enough points', () => {
+            // Test implementation...
+        });
     });
-  });
-
 });
 
-// DynamicTextGen
 
+
+
+// DynamicTextGen 
+
+// Import  module
 const DynamicTextGen = require('./Dynamic_Text_Gen');
 
-describe('DynamicTextGen', () => {
+
+describe('DynamicTextGen_Module', () => {
+    // Initialize instance 
     let dynamicTextGen;
-  
+
     beforeEach(() => {
-        dynamicTextGen = new DynamicTextGen(['Pattern 1', 'Pattern 2', 'Pattern 3']);
+        // Created sample patterns 
+        const Patterns = ['Pattern 1', 'Pattern 2', 'Pattern 3'];
+        dynamicTextGen = new DynamicTextGen(Patterns);
     });
-  
-    describe('GenerateText', () => {
+
+    describe('generateText_Method', () => {
+        // Test case 
         test('Should generate dynamic text based on predefined patterns', () => {
+            // Generate text/ verify text to be string 
             const generatedText = dynamicTextGen.generateText();
-            // How the text should be generated
             expect(typeof generatedText).toBe('string');
         });
     });
 });
+
+
+
 
 // Gamemodes
 
@@ -68,47 +91,48 @@ const GameModes = require('./Game_Modes');
 
 describe('GameModes', () => {
     let gameModes;
-  
+
     beforeEach(() => {
         // Initialize GameModes instance
         gameModes = new GameModes();
     });
-  
-    describe('SinglePlayerMode', () => {
+
+    describe('Single_Player_Mode', () => {
         test('Should start a single-player game session', () => {
             const gameSession = gameModes.singlePlayerMode();
             // Test implementation...
-      });
+        });
     });
-  
-    describe('MultiplayerMode', () => {
+
+    describe('Multiplayer_Mode', () => {
         test('Should start a multiplayer game session', () => {
             const gameSession = gameModes.multiplayerMode();
             // Test implementation...
         });
     });
-  
-    describe('PracticeMode', () => {
+
+    describe('Practice_Mode', () => {
         test('Should start a practice game session', () => {
             const gameSession = gameModes.practiceMode();
             // Test implementation...
         });
     });
-  
-    describe('DynamicRace', () => {
+
+    describe('Dynamic_Race_Mode', () => {
         test('Should start a dynamic race game session', () => {
             const gameSession = gameModes.dynamicRace();
             // Test implementation...
         });
     });
-  
-    describe('RobotOpponentMode', () => {
+
+    describe('Robot_Opponent_Mode', () => {
         test('Should start a game session against a robot opponent', () => {
             const gameSession = gameModes.robotOpponentMode();
             // Test implementation...
         });
     });
 });
+
 
 // KeyboardAnimation
 
@@ -122,13 +146,15 @@ describe('KeyboardAnimation', () => {
         keyboardAnimation = new KeyboardAnimation('A');
     });
 
-    describe('DisplayAnimation', () => {
+    describe('Display_Animation', () => {
+        // Test Case
         test('Should display keyboard animation for the pressed key', () => {
             // Test implementation...
         });
     });
-
 });
+
+
 
 // Leaderboard
 
@@ -142,19 +168,22 @@ describe('Leaderboard', () => {
         leaderboard = new Leaderboard([10, 20, 30, 40, 50]);
     });
 
-    describe('UpdateLeaderboard', () => {
+    describe('Update_Leaderboard', () => {
+        // Test case 
         test('Should update the leaderboard with a new player\'s rank', () => {
             // Test implementation...
         });
     });
 
-  describe('ViewTopPlayers', () => {
+    describe('View_Top_Players', () => {
+        //Test Case 
         test('Should retrieve the top players from the leaderboard', () => {
             const topPlayers = leaderboard.viewTopPlayers();
             // Test implementation...
         });
     });
 });
+
 
 // UserAuthentication
 
@@ -169,7 +198,7 @@ describe('UserAuthentication', () => {
     });
 
     describe('Login', () => {
-        test('Should log in a user', () => {
+        test('should log in a user', () => {
             const username = 'testuser';
             const password = 'password';
             // Test implementation...
@@ -177,7 +206,7 @@ describe('UserAuthentication', () => {
     });
 
     describe('Register', () => {
-        test('Should register a new user', () => {
+        test('should register a new user', () => {
             const username = 'newuser';
             const email = 'newuser@example.com';
             const password = 'password';
@@ -185,50 +214,52 @@ describe('UserAuthentication', () => {
         });
     });
 
-    describe('ContinueAsGuest', () => {
-        test('Should allow the user to continue as a guest', () => {
+    describe('Continue_as_Guest', () => {
+        test('should allow the user to continue as a guest', () => {
             // Test implementation...
         });
     });
 });
 
-// Game Sesion
 
-const game_sesion = require('./game_sesion');
 
-describe('game_sesion', () => {
+// Game Session
+
+const gameSession = require('./gameSession');
+
+describe('Game_Session', () => {
     beforeEach(() => {
         // Reset currentText and userInput before each test
-        game_sesion.currentText = "";
-        game_sesion.userInput = "";
+        gameSession.currentText = "";
+        gameSession.userInput = "";
     });
 
-    describe('StartGame', () => {
-        test('Should initialize variables and display the system', () => {
+    describe('Start_Game', () => {
+        test('should initialize variables and display the system', () => {
             // Test implementation...
         });
     });
 
-    describe('endGame', () => {
+    describe('End_Game', () => {
         test('should perform close cases for the system', () => {
             // Test implementation...
         });
     });
 
-    describe('calculateWPM', () => {
+    describe('Calculate_WPM', () => {
         test('should calculate words per minute (WPM)', () => {
-            // Set up currentText and userInput for testing idk...
-            game_sesion.currentText = "I can sort of type really fast.";
-            game_sesion.userInput = "I can type really fast.";
+            // Set up currentText and userInput for testing...
+            gameSession.currentText = "I can sort of type really fast.";
+            gameSession.userInput = "I can type really fast.";
             // Test implementation...
         });
     });
 
-    describe('calculateAccuracy', () => {
+    describe('Calculate_Accuracy', () => {
         test('should calculate accuracy percentage', () => {
-            // Set up currentText and userInput for testing idk...
-            game_sesion.currentText = "I can sort of type really fast.";
-            game_sesion.userInput = "I can type really fast.";
+            // Set up currentText and userInput for testing...
+            gameSession.currentText = "I can sort of type really fast.";
+            gameSession.userInput = "I can type really fast.";
             // Test implementation...
         });
     });
