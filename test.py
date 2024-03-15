@@ -65,6 +65,35 @@ class Test_User_Data():
         """
         pass
 
+class Test_Database():
+    def test_insert():
+        """
+        Test: That a new user record is correctly inserted into the database
+        Result: True if the user record is inserted into the database
+        """
+        pass
+
+    def test_update():
+        """
+        Test: That a user record is correctly updated in the database
+        Result: True if the user record is updated in the database
+        """
+        pass
+
+    def test_query():
+        """
+        Test: That the correct user record is retrieved from the database
+        Result: True if the correct user record is retrieved from the database
+        """
+        pass
+
+    def test_delete():
+        """
+        Test: That a user record is correctly deleted from the database
+        Result: True if the user record is deleted from the database
+        """
+        pass
+
 class Test_Game():
     '''
     Class for testing the game_session class
