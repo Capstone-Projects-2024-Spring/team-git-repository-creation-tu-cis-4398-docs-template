@@ -65,6 +65,39 @@ class Test_User_Data():
         """
         pass
 
+class Test_Database():
+    def test_insert():
+        """
+        Test: That a new user record is correctly inserted into the database
+        Input: User fields 
+        Result: True if the user record is inserted into the database
+        """
+        pass
+
+    def test_update():
+        """
+        Test: That a user record is correctly updated in the database
+        Input: A user’s name with or without other fields 
+        Result: True if the user record is updated in the database
+        """
+        pass
+
+    def test_query():
+        """
+        Test: That the correct user record is retrieved from the database
+        Input: A username 
+        Result: True if the correct user record is retrieved from the database
+        """
+        pass
+
+    def test_delete():
+        """
+        Test: That a user record is correctly deleted from the database
+        Input: A username 
+        Result: True if the user record is deleted from the database
+        """
+        pass
+
 class Test_Game():
     '''
     Class for testing the game_session class
@@ -101,11 +134,11 @@ class Test_Game():
         pass
 
     def test_race_end():
-         """
+        """
         Test: Ensure that the race is ended and necessary cleanup actions are performed
         Result: True if all cleanup actions are successfully executed
         """
-         pass
+        pass
     
     def test_add_player():
         """
@@ -162,3 +195,4 @@ class Test_Player():
         Result: True if current score and updated score match
         """
          pass
+
