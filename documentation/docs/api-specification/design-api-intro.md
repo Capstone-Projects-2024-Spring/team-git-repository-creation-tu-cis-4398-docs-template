@@ -6,36 +6,87 @@ description: What should be in this section.
 Design Document - Part II API
 =============================
 
-**Purpose**
+## API Spec for Creating SQL Queries from User Prompts
 
-This Design Document gives the complete design of the software implementation. This information should be in structured comments (e.g. Javadoc) in the source files. We encourage the use of a documentation generation tool to generate a draft of your API that you can augment to include the following details.
+This document outlines the API specifications for how PhillyGPT interacts with ChatGPT for query generation and returning the JSON/Dictionary data from our databases. This solution is Carto agnostic. 
 
-**Requirements**
+### Classes/Exceptions
 
-In addition to the general documentation requirements the Design Document - Part II API will contain:
+* **NotReadOnlyException:** Exception raised when a non-read-only SQL query is attempted.
 
-General review of the software architecture for each module specified in Design Document - Part I Architecture. Please include your class diagram as an important reference.
+### Functions
 
-**For each class define the data fields, methods.**
+#### `make_default_message(schemas_str: str) -> List[Dict[str, str]]`
 
-The purpose of the class.
+This function constructs an enriched prompt for the LLM by:
 
-The purpose of each data field.
+* Providing context about available tables and their schemas (schemas_str).
+* Offering guidance on formulating syntactically correct SQL queries.
+* Setting expectations about the response format and limitations.
 
-The purpose of each method
+**Parameters:**
 
-Pre-conditions if any.
+* `schemas_str`: A string containing the schemas of the available tables.
 
-Post-conditions if any.
+**Returns:**
 
-Parameters and data types
+* The enriched prompt.
 
-Return value and output variables
+#### `make_msg_with_schema(natural_language_query: str) -> str`
 
-Exceptions thrown\* (PLEASE see note below for details).
+This function returns a message prompting the LLM to rephrase the user's query in a more analytical way.
 
-An example of an auto-generated and then augmented API specification is here ([Fiscal Design Document 2\_API.docx](https://templeu.instructure.com/courses/106563/files/16928898?wrap=1 "Fiscal Design Document 2_API.docx") )
+**Parameters:**
 
-This group developed their API documentation by hand ([Design Document Part 2 API-1\_MovieMatch.docx](https://templeu.instructure.com/courses/106563/files/16928899?wrap=1 "Design Document Part 2 API-1_MovieMatch.docx") )
+* `natural_language_query`: The user's natural language query.
 
-\*At the top level, or where appropriate, all exceptions should be caught and an error message that is meaningful to the user generated. It is not OK to say ("xxxx has encountered a problem and will now close (OK?)". Error messages and recovery procedures should be documented in the User’s Manual.
+**Returns:**
+
+* A string containing an improved prompt.
+
+#### `is_read_only_query(sql_query: str) -> bool`
+
+This function checks if the provided SQL query is a read-only query.
+
+**Parameters:**
+
+* `sql_query`: The SQL query to be checked.
+
+**Returns:**
+
+* True if the query is read-only, False otherwise.
+
+#### `execute_sql(sql_query: str) -> Dict`
+
+This function executes the provided SQL query and returns the results in a dictionary/JSON format.
+
+**Parameters:**
+
+* `sql_query`: The SQL query to be executed.
+
+**Returns:**
+
+* A dictionary containing the following keys:
+    * `column_names`: A list of column names in the result.
+    * `results`: A list of rows, where each row is a dictionary mapping column names to their corresponding values.
+
+**Raises:**
+
+* `NotReadOnlyException`: If the query is not read-only.
+
+#### `text_to_sql_with_retry(natural_language_query: str, table_names: List[str], k: int = 2) -> Tuple[Dict, str]`
+
+This function attempts to generate a valid SQL query for the given natural language query, using an LLM (in our case GPT) and retrying up to k times if necessary.
+
+**Parameters:**
+
+* `natural_language_query`: The user's natural language query.
+* `table_names`: A list of table names relevant to the query.
+* `k` (optional): The number of retries (defaults to 2).
+
+**Returns:**
+
+* A tuple containing:
+    * A dictionary representing the SQL query results (same format as `execute_sql`).
+    * The generated SQL query string. This can be used to create a new Carto Layer to allow us to display the map. However, this current solution does not make us tied to using Carto as Professor Applebaum requested.
+* Returns `None, None` if the query could not be generated after k retries.
