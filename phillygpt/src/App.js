@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import './App.css';
 import Navbar from './components/navbar.jsx';
 import SearchBar from './components/searchbar.jsx';
-import DisplayArea from './components/displayWithMap.jsx';
+import DisplayArea from './components/displayArea.jsx';
 import Title from './components/title.jsx';
 //import {BrowserRouter as Router, Route} from 'react-router-dom';
 import CheckClass from './components/DarkMode/checkClass.jsx';
@@ -36,7 +36,7 @@ function App() {
 
       {/*Display area + Response Box*/}
       <div className="display-area-container">
-        <DisplayArea />
+        <DisplayArea route={'/response'} /> {/* TEMP until routing is set up*/}
       </div>
     </div>
   );
