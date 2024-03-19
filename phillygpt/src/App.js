@@ -36,7 +36,7 @@ function App() {
 
       {/*Display area + Response Box*/}
       <div className="display-area-container">
-        <DisplayArea route={'/response'} /> {/* TEMP until routing is set up*/}
+        <DisplayArea route={'/response'} /> {/* TEMP until routing is set up ALSO NOTE: if route = / then suggestions should be here instead.*/}
       </div>
     </div>
   );
