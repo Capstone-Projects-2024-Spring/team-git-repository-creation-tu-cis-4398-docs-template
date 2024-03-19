@@ -51,9 +51,10 @@ const ModeSwitch = () => {
         <span className="mr-5 text-white-400 dark:text-gray-200"> </span> 
         <div className="w-16 h-8 bg-gray-500 dark:bg-gray-800 rounded-full shadow-inner relative flex items-center">
           <div
-            className={`absolute left-0 w-8 h-8 bg-white dark:bg-gray-300 rounded-full shadow-md transition-transform duration-300 ease-in-out ${
-              isDarkMode ? 'translate-x-full' : ''
+            className={`absolute w-8 h-8 bg-white dark:bg-gray-300 rounded-full shadow-md transition-transform duration-300 ease-in-out ${
+              isDarkMode ? 'translate-x-full' : 'translate-x-0'
             }`}
+            
           />
           <SunIcon
             className={`absolute left-1 w-5 h-5 text-yellow-400 ${
