@@ -9,4 +9,4 @@ const ResponsePage = () => {
   );
 }
 
-export default Response;
+export default ResponsePage;

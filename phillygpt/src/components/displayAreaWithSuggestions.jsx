@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponseBox from "./responsebox.jsx";
+
 const DisplayArea = () => {
   return (
     <div className="display-area-container mx-8 mt-8 mb-4">
