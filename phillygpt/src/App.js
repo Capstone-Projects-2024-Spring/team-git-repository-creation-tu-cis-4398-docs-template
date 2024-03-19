@@ -26,7 +26,7 @@ function App() {
       <Navbar />
 
       {/*Title*/}
-      <Title route = {'/'}/>
+      <Title route = {'/'}/> {/* TEMP ROUTING UNTIL ROUTES ARE SET UP */}
 
       {/*SearchBar + Button*/}
       <SearchBar
