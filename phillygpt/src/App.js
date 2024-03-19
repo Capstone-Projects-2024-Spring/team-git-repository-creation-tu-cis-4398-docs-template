@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import './App.css';
 import Navbar from './components/navbar.jsx';
 import SearchBar from './components/searchbar.jsx';
 import DisplayArea from './components/displayWithMap.jsx';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Title from './components/title.jsx';
+//import {BrowserRouter as Router, Route} from 'react-router-dom';
+import CheckClass from './components/DarkMode/checkClass.jsx';
 
 function App() {
   const [userInput, setUserInput] = useState('');
-
+  
   const handleInputChange = (event) => {
     setUserInput(event.target.value);
   };
@@ -16,15 +18,15 @@ function App() {
     console.log(userInput);
   };
 
+  const isDark = CheckClass(); //This is to check for dark mode vs not
+  
   return (
-    <div className="bg-darkgray min-h-screen">
+    <div className={`bg-${isDark ? 'darkgray' : 'white'} min-h-screen`}>
       {/* Navbar*/}
       <Navbar />
 
       {/*Title*/}
-      <div className="text-white text-center p-4 font-extrabold text-4xl">PhillyGPT</div>
-      <div className="text-white text-center mb-4">This is a temporary description for PhillyGPT</div>
-      <div className="flex justify-center items-center mb-4"> </div>
+      <Title route = {'/'}/>
 
       {/*SearchBar + Button*/}
       <SearchBar
