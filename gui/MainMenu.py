@@ -3,7 +3,7 @@ import pydoc
 class MainMenu:
 
     """
-    MainMenu class manages the main menu of the for our program. It handles displaying menu options (mini games, settings, player selection),
+    Purpose: MainMenu class manages the main menu of the for our program. It handles displaying menu options (mini games, settings, player selection),
     user selections, navigation to the selection screen, and displaying settings.
 
     Attributes:
@@ -16,7 +16,7 @@ class MainMenu:
     
     def displayMenu(self):
         """
-        Displays the main menu options to the player(s).
+        Purpose: Displays the main menu options to the player(s).
         No pre-conditions.
         Post-conditions: Menu options are displayed to the user.
         """
@@ -26,7 +26,7 @@ class MainMenu:
     def handleSelection(selection:str): 
            
         """
-        Identifies the user's choice from the main menu options.
+        Purpose: Identifies the user's choice from the main menu options.
         
         Pre-conditions:
             displayMenu has been called, and user input has been received.
@@ -37,7 +37,7 @@ class MainMenu:
             selection (str): The user's choice from the menu options.
             
         Returns:
-            None: The return value is the selection (str)
+            The return value is the selection (str)
             
         Raises:
             ValueError: If the selection does not match any menu options.
@@ -47,7 +47,7 @@ class MainMenu:
     
     def navigateToSelectionScreen(self):
         """
-        Navigates the user from the main menu to the selection screen.
+        Purpose: Navigates the user from the main menu to the selection screen.
         
         No pre-conditions.
         Post-conditions: The application state changes to the selection screen.
@@ -55,4 +55,8 @@ class MainMenu:
 
         return 
     
+<<<<<<< Updated upstream
 pydoc.writedoc("MainMenu")
+=======
+pydoc.writedoc('MainMenu')
+>>>>>>> Stashed changes
