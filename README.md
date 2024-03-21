@@ -63,3 +63,71 @@ Discuss what you need to develop this project. This includes background informat
 </table>
 
 [//]: # ( readme: collaborators -end )
+
+
+## How To Run Path Pilot
+
+
+### Install Python and Node.js if you haven't
+Node.js is a JavaScript runtime environment that allows you to run JavaScript code outside of a web browser. It's commonly used for building server-side JavaScript applications and also for front-end development, especially when working with tools like ReactJS, which rely on Node.js for development tasks such as package management and build processes.
+
+### 1. Install pip if don't have it
+pip is pythons package manager and allows you to download packages easily from the command line.
+
+### 2. set up your virtual environment *VERY IMPORTANT* 
+In Python, a virtual environment is a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages. This allows you to work on multiple projects with different dependencies without them interfering with each other.
+
+command line:
+ pip install virtualenv
+go to path pilot project directory and create your virtual environment. In command line type: 
+
+#### virtualenv pathPilot
+(pathPilot is the name I used for my env, you can name it whatever)
+
+activate your virtual environment by typing 
+
+Windows:
+pathPilot\Scripts\activate
+
+Mac:
+source pathPilot/bin/activate
+
+You will now notice your directory looks different (Notice the (pathPilot) at the beginning). This is you are now inside and working in your virtual environment. This is where you will install all your packages and do all the work on Path Pilot.
+
+Whenever you are done coding, you can type "deactivate" in the command line and return to your system's default environment.
+
+### 3. Install Necessary Packages
+
+**Inside your virtual environment, install these required packages**
+
+pip install django
+
+pip install react
+
+pip install djangorestframework 
+
+pip install django-cors-headers 
+
+**inside your virtual environment, within the "myapp" directory** 
+
+npm install axios
+
+*Django Rest Framework - this is used to build API endpoints*
+
+*Django-cors-headers - this is middleware for handling CORS (cross-origin resource sharing headers) to prevent cross-origin requests. security thing*
+
+*Axios - this is a Javascript library used for making HTTP requests from browser or Node.js*
+
+### 4. Run the Project
+
+open two terminal windows (both on the your virtual environment)
+
+**In the first window, navigate to the myproject directory and run the following command**
+
+python manage.py runserver
+
+**In the second window, navigate to the myapp directory and run the following command**
+
+npm start
+
+This will start the React development server. Open your web browser and navigate to http://localhost:3000/
