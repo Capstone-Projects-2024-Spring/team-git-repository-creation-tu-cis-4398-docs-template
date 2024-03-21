@@ -36,15 +36,23 @@ const LogIn = memo(function LogIn(props = {}) {
       <div className={classes.line1}></div>
       <div className={classes.line2}></div>
       <div className={classes.rectangle3}></div>
+<<<<<<< HEAD
       <button type="submit" className={classes.submit}>Submit</button>
+=======
+      <div className={classes.submit}>Submit</div>
+>>>>>>> refs/remotes/origin/main
       <div className={classes.user}></div>
       <div className={classes.lock}></div>
       <div className={classes.needAnAccountSignUp}>
         <p className={classes.labelWrapper}>
           <span className={classes.label}>Need an account? </span>
+<<<<<<< HEAD
           <button type="submit" className={classes.label2}>
             <span>Sign Up</span>
           </button>       
+=======
+          <span className={classes.label2}>Sign Up</span>
+>>>>>>> refs/remotes/origin/main
         </p>
       </div>
       <div className={classes.frame1}>
