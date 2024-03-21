@@ -20,7 +20,7 @@ connection.once('open', () => {
 const profileRouter = require('./routes/profile');
 const userRouter = require('./routes/user');
 
-app.use('/profile', profileRouter);
+//app.use('/profile', profileRouter);
 app.use('/user', userRouter);
 
 
