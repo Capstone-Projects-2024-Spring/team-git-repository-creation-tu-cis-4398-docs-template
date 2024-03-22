@@ -1,13 +1,11 @@
 import React from 'react';
 import ResponseBox from "./responsebox.jsx";
+import {useLocation} from 'react-router-dom';
 import Examples from './examples';
 
-const shouldShowResponseBox = (route) => {
-  return route === '/response';
-};
+const DisplayArea = () => {
 
-const DisplayArea = ({ route }) => {
-  const showResponseBox = shouldShowResponseBox(route);
+  const route = useLocation().pathname;
 
   const exampleQuestions = [
     "What farmers markets will happen this weekend?",
@@ -28,7 +26,7 @@ const DisplayArea = ({ route }) => {
         <div className="map-container w-1/2 h-full bg-gray-200 mr-4 rounded-lg overflow-hidden"> 
           <img src="https://via.placeholder.com/300x200" alt="Default Map" className="w-full h-full object-cover" />
         </div>
-        {route === '/' ? <p>Suggestions</p> : showResponseBox && <ResponseBox />}
+        {(route === '/' || route === '/home') ? <p>Suggestions</p> : route ==='/response' && <ResponseBox />}
       </div>
       {/* Rendering the example questions using the Examples component */}
       <div className="example-questions-container flex flex-wrap justify-center items-center gap-10 mx-10 my-10">
