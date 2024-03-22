@@ -15,7 +15,6 @@ function App() {
     <Router>
       <div className={`bg-${isDark ? 'darkgray' : 'white'} min-h-screen`}>
         <Navbar />
-        
         <Routes>
           <Route exact path="/" element={<HomePage/>} />
           <Route path="/home" element={<HomePage/>} />
