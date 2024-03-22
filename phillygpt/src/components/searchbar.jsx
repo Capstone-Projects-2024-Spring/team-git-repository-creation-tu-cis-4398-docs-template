@@ -1,9 +1,22 @@
 import React from 'react';
 import CheckClass from './DarkMode/checkClass';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const SearchBar = ({ userInput, handleInputChange, handleButtonClick }) => {
+const SearchBar = () => {
 
   const isDark = CheckClass();
+  const navigate = useNavigate();
+  const [userInput, setUserInput] = useState('');
+  
+  const handleInputChange = (event) => {
+    setUserInput(event.target.value);
+  };
+
+  const handleButtonClick = () => {
+    console.log(userInput);
+    navigate(`/response?input=${encodeURIComponent(userInput)}`);
+  };
   
   return (
     <div className="flex justify-center items-center mb-4">
