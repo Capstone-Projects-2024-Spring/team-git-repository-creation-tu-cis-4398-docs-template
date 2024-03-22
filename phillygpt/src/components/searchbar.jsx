@@ -37,7 +37,7 @@ const SearchBar = () => {
       />
       <button
         onClick={handleButtonClick}
-        className="bg-blue-500 text-white p-2 rounded-r-md w-28 h-12"
+        className="bg-blue-500 text-white p-2 rounded-r-md w-28 h-12 font-lightbold text-mg"
         style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
       >
         Search
