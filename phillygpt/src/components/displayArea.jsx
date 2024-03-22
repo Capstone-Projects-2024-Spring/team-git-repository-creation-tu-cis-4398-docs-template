@@ -12,7 +12,7 @@ const DisplayArea = ({ route }) => {
   const exampleQuestions = [
     "What farmers markets will happen this weekend?",
     "What time is the Head House square farmers market open?",
-    "How many farmers markets will happen on weekdays?",
+    "How many farmers markets will there be on the weekdays?",
     "What time does the Rittenhouse Square farmers market end?",
   ];
 
