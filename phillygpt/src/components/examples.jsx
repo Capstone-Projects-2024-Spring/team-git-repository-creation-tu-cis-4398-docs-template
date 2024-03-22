@@ -7,7 +7,7 @@ function Examples({ text, onClick }) {
   return (
     <button
       className={`w-64 h-12 px-10 py-10 rounded-lg shadow-md font-medium tracking-wide transform transition-colors duration-200 text-sm flex items-center justify-between ${
-        isDark ? 'bg-gray-navbar text-white' : 'bg-white text-gray-800'
+        isDark ? 'bg-gray-navbar text-white' : 'bg-suggestionbox text-gray-800'
       }`}
       onClick={onClick}
     >

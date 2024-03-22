@@ -11,9 +11,11 @@ module.exports = {
         'navbar-lm' : '#e5d0b1',
         'lm_nav': '#d7c1a5',
         'lm_body' : '#ece1d0',
+        'suggestionbox' : '#e5d0b1',
       },
       fontWeight:{
         'extrabold' : 800,
+        'lightbold' : 500,
       }
     },
   },
