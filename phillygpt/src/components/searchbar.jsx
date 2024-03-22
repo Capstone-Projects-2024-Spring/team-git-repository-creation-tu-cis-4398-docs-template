@@ -31,7 +31,7 @@ const SearchBar = () => {
         type="text"
         value={userInput}
         onChange={handleInputChange}
-        className={`p-2 w-2/5 h-12 rounded-l-md ${isDark ? 'text-black bg-white' : 'text-black bg-gray-300'}`}
+        className={`p-2 w-2/5 h-12 rounded-l-md 'text-black bg-gray-300'}`}
         placeholder="Ask me something..."
         style={{ borderTopRightRadius: 0, borderBottomRightRadius: 0 }}
       />
