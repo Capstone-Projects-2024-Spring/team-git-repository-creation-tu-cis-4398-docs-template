@@ -2,10 +2,13 @@ import React from 'react';
 import ResponseBox from "./responsebox.jsx";
 import {useLocation} from 'react-router-dom';
 import Examples from './examples';
+import CheckClass from './DarkMode/checkClass';
 
 const DisplayArea = () => {
 
   const route = useLocation().pathname;
+
+  const isDark = CheckClass();
 
   const exampleQuestions = [
     "What farmers markets will happen this weekend?",
@@ -29,7 +32,7 @@ const DisplayArea = () => {
          {/* Conditionally render based on the route */}
          {route === '/' || route === '/home' ? (
            <div className="example-questions-container flex flex-col items-center">
-           <h2 className="text-center mb-4">Try these prompts: </h2>
+           <h2 className={`text-center mb-4 ${isDark ? 'text-white' : 'text-black'}`}>Try these prompts:</h2>
            {exampleQuestions.map((question, index) => (
              <div key={index} className="mb-4">
                <Examples
