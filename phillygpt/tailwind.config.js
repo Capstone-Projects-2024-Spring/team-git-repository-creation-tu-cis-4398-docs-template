@@ -8,6 +8,8 @@ module.exports = {
       colors :{
         'gray-navbar' : '#545454',
         'darkgray' : '#333333',
+        'navbar-lm' : '#e5d0b1',
+        'lm_nav': '#d7c1a5',
       },
       fontWeight:{
         'extrabold' : 800,
