@@ -10,8 +10,7 @@ const ResponsePage = () => {
 
   return (
     <div>
-      <h1>Response Page</h1>
-      <p>User Input: {userInput}</p>
+      <p>User Input: {userInput}</p> {/*THIS IS FOR TESTING PURPOSES. REMOVE WHEN DONE BEFORE DEMO.*/}
       <Title route = {'/response'}/>
       <SearchBar/>
       <div className="display-area-container">
