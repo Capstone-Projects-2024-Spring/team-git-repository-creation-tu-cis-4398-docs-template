@@ -15,7 +15,11 @@ const SearchBar = () => {
 
   const handleButtonClick = () => {
     console.log(userInput);
-    navigate(`/response?input=${encodeURIComponent(userInput)}`);
+    if (userInput === 'ERROR') {
+      navigate('/reprompt');
+    } else {
+      navigate(`/response?input=${encodeURIComponent(userInput)}`);
+    }
   };
   
   return (
