@@ -28,15 +28,17 @@ const DisplayArea = () => {
         </div>
          {/* Conditionally render based on the route */}
          {route === '/' || route === '/home' ? (
-          <div className="example-questions-container flex flex-wrap justify-center items-center gap-10 mx-10 my-10">
-            {exampleQuestions.map((question, index) => (
-              <Examples
-                key={index}
-                text={question}
-                onClick={() => handleQuestionClick(question)}
-              />
-            ))}
-          </div>
+           <div className="example-questions-container flex flex-col items-center">
+           <h2 className="text-center mb-4">Try these prompts: </h2>
+           {exampleQuestions.map((question, index) => (
+             <div key={index} className="mb-4">
+               <Examples
+                 text={question}
+                 onClick={() => handleQuestionClick(question)}
+               />
+             </div>
+           ))}
+         </div>
         ) : route === '/response' && <ResponseBox />}
       </div>
       </div>
