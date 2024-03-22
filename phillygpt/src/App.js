@@ -1,10 +1,10 @@
 import React, { useState} from 'react';
 import './App.css';
 import Navbar from './components/navbar.jsx';
-import SearchBar from './components/searchbar.jsx';
-import DisplayArea from './components/displayArea.jsx';
-import Title from './components/title.jsx';
-//import {BrowserRouter as Router, Route} from 'react-router-dom';
+import HomePage from './pages/home.jsx';
+import ResponsePage from './pages/response.jsx';
+import RepromptPage from './pages/reprompt.jsx';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import CheckClass from './components/DarkMode/checkClass.jsx';
 
 function App() {
@@ -21,24 +21,17 @@ function App() {
   const isDark = CheckClass(); //This is to check for dark mode vs not
   
   return (
-    <div className={`bg-${isDark ? 'darkgray' : 'white'} min-h-screen`}>
-      {/* Navbar*/}
-      <Navbar />
-
-      {/*Title*/}
-      <Title route = {'/'}/> {/* TEMP ROUTING UNTIL ROUTES ARE SET UP */}
-
-      {/*SearchBar + Button*/}
-      <SearchBar
-        userInput = {userInput}
-        handleInputChange = {handleInputChange}
-        handleButtonClick = {handleButtonClick}/>
-
-      {/*Display area + Response Box*/}
-      <div className="display-area-container">
-        <DisplayArea route={'/response'} /> {/* TEMP until routing is set up ALSO NOTE: if route = / then suggestions should be here instead.*/}
+    <Router>
+      <div className={`bg-${isDark ? 'darkgray' : 'white'} min-h-screen`}>
+        <Navbar />
+        <HomePage/>
+        <Routes>
+          <Route exact path="/" render={() => <HomePage userInput={userInput} handleInputChange={handleInputChange} handleButtonClick={handleButtonClick} />} />
+          <Route path="/response" component={ResponsePage} />
+          <Route path="/reprompt" component={RepromptPage} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
