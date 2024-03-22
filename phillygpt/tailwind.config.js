@@ -10,6 +10,7 @@ module.exports = {
         'darkgray' : '#333333',
         'navbar-lm' : '#e5d0b1',
         'lm_nav': '#d7c1a5',
+        'lm_body' : '#ece1d0',
       },
       fontWeight:{
         'extrabold' : 800,
