@@ -26,19 +26,20 @@ const DisplayArea = () => {
         <div className="map-container w-1/2 h-full bg-gray-200 mr-4 rounded-lg overflow-hidden"> 
           <img src="https://via.placeholder.com/300x200" alt="Default Map" className="w-full h-full object-cover" />
         </div>
-        {(route === '/' || route === '/home') ? <p>Suggestions</p> : route ==='/response' && <ResponseBox />}
+         {/* Conditionally render based on the route */}
+         {route === '/' || route === '/home' ? (
+          <div className="example-questions-container flex flex-wrap justify-center items-center gap-10 mx-10 my-10">
+            {exampleQuestions.map((question, index) => (
+              <Examples
+                key={index}
+                text={question}
+                onClick={() => handleQuestionClick(question)}
+              />
+            ))}
+          </div>
+        ) : route === '/response' && <ResponseBox />}
       </div>
-      {/* Rendering the example questions using the Examples component */}
-      <div className="example-questions-container flex flex-wrap justify-center items-center gap-10 mx-10 my-10">
-        {exampleQuestions.map((question, index) => (
-          <Examples
-            key={index} 
-            text={question}
-            onClick={() => handleQuestionClick(question)}
-          />
-        ))}
       </div>
-    </div>
   );
 }
 
