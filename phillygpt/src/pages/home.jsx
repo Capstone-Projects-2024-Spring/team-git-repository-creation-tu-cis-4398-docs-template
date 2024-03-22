@@ -1,9 +1,27 @@
-import React from 'react'
+import React from 'react';
+import SearchBar from '../components/searchbar.jsx';
+import DisplayArea from '../components/displayArea.jsx';
+import Title from '../components/title.jsx';
 
-function HomePage() {
+const Home = ({ userInput, handleInputChange, handleButtonClick }) => {
   return (
-    <div>home</div>
-  )
-}
+    <div>
+      {/*Title*/}
+      <Title route={'/'} />
 
-export default HomePage
+      {/*SearchBar + Button*/}
+      <SearchBar
+        userInput={userInput}
+        handleInputChange={handleInputChange}
+        handleButtonClick={handleButtonClick}
+      />
+
+      {/*Display area + Response Box*/}
+      <div className="display-area-container">
+        <DisplayArea route = {'/'}/>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
