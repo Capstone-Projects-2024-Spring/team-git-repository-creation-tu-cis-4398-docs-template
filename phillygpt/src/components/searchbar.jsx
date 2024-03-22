@@ -15,10 +15,13 @@ const SearchBar = () => {
 
   const handleButtonClick = () => {
     console.log(userInput);
-    if (userInput === 'ERROR') { //CHANGE WHEN BACKEND IS CONNECTED. SHOULD BE REPLACED WITH CHATGPT ERROR PROMPT.
+    if (userInput.trim() === 'ERROR') { //CHANGE WHEN BACKEND IS CONNECTED. SHOULD BE REPLACED WITH CHATGPT ERROR PROMPT.
       navigate('/reprompt');
-    } else {
-      navigate(`/response?input=${encodeURIComponent(userInput)}`); //REPLACE WITH CHATGPT RESPONSE.
+    }
+    else if(userInput.trim() ===""){
+    }
+    else {
+      navigate(`/response?input=${encodeURIComponent(userInput)}`); //REPLACE WITH CHATGPT RESPONSE. 
     }
   };
   
