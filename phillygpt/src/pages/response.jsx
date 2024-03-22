@@ -1,10 +1,15 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ResponsePage = () => {
+  const location = useLocation();
+  const userInput = new URLSearchParams(location.search).get('input');
+
   return (
     <div>
       <h1>Response Page</h1>
-      {/* Add your content here */}
+      <p>User Input: {userInput}</p>
+
     </div>
   );
 }
