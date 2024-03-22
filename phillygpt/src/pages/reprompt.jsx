@@ -4,7 +4,6 @@ const RepromptPage = () => {
   return (
     <div>
       <h1>Reprompt Page</h1>
-      {/* Add your content here */}
     </div>
   );
 }

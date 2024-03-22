@@ -2,8 +2,20 @@ import React from 'react';
 import SearchBar from '../components/searchbar.jsx';
 import DisplayArea from '../components/displayArea.jsx';
 import Title from '../components/title.jsx';
+import { useState } from 'react';
 
-const Home = ({ userInput, handleInputChange, handleButtonClick }) => {
+const HomePage = () => {
+
+  const [userInput, setUserInput] = useState('');
+  
+  const handleInputChange = (event) => {
+    setUserInput(event.target.value);
+  };
+
+  const handleButtonClick = () => {
+    console.log(userInput);
+  };
+
   return (
     <div>
       {/*Title*/}
@@ -24,4 +36,4 @@ const Home = ({ userInput, handleInputChange, handleButtonClick }) => {
   );
 };
 
-export default Home;
+export default HomePage;
