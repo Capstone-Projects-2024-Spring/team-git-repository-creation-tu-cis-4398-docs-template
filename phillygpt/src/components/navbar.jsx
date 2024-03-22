@@ -12,13 +12,13 @@ function Navbar() {
         <div className={`fixed top-0 left-0 right-0 z-10`}>
             <nav className={`${backgroundColor} ${textColor} text-xl flex justify-between items-center gap-4 p-2`}>
                 <ul className="flex space-x-12 m-0 p-0 list-none">
-                    <li className={`hover:${isDark ? 'bg-gray-400' : 'bg-lm_nav'} p-2`}>
+                    <li className={`${isDark ? 'hover:bg-gray-400' : 'hover:bg-lm_nav'} p-2`}>
                             <a href="/" className="no-underline text-inherit">Home</a>
                     </li>
-                    <li className={`hover:${isDark ? 'bg-gray-400' : 'bg-lm_nav'} p-2`}>
+                    <li className={`${isDark ? 'hover:bg-gray-400' : 'hover:bg-lm_nav'} p-2`}>
                         <a href="https://capstone-projects-2024-spring.github.io/project-phillygpt/" className="no-underline text-inherit">Documentation</a>
                     </li>
-                    <li className={`hover:${isDark ? 'bg-gray-400' : 'bg-lm_nav'} p-2`}>
+                    <li className={`${isDark ? 'hover:bg-gray-400' : 'hover:bg-lm_nav'} p-2`}>
                         <a href="https://github.com/Capstone-Projects-2024-Spring/project-phillygpt" className="no-underline text-inherit">GitHub</a>
                     </li>
                 </ul>
