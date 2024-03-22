@@ -15,7 +15,7 @@ const HomePage = () => {
 
       {/*Display area + Response Box*/}
       <div className="display-area-container">
-        <DisplayArea route = {'/'}/>
+        <DisplayArea/>
       </div>
     </div>
   );
