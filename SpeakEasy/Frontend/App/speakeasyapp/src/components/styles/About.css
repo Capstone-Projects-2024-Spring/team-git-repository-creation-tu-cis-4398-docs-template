@@ -1,3 +1,5 @@
+/* About section */
+
 .about-container {
     display: flex; /* Use flexbox layout for the about container */
     align-items: center; /* Align items vertically in the container */
@@ -12,7 +14,7 @@
     padding: 20px; /* Add padding around the text container */
 }
 
-.rectangle {
+.orange-rectangle {
     width: 20px; /* Set width of the rectangle */
     height: 100%; /* Set height of the rectangle to 100% of the parent container */
     background-color: #f7bc75; /* Set background color of the rectangle */
