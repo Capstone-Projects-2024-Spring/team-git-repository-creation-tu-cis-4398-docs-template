@@ -17,6 +17,7 @@ const MainPage = () => {
                 <img src={Logo} alt="SpeakEasy" /> {/* Logo */}
                 <h1>Welcome, _________!</h1> {/* Welcome message */}
             </div>
+            <div className='light-orange-rectangle'/>
             <div className='bottom-container'> {/* Container for bottom section */}
                 <div className='navbar-container bottom-section'> {/* Navbar container */}
                     <ul>
