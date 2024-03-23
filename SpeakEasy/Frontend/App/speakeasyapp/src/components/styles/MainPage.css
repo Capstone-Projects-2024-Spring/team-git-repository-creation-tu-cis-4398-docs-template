@@ -1,5 +1,5 @@
 body {
-    background-color: #f7bc75; /* Set background color */
+    background-color: orange; /* Set background color */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
 }
@@ -31,6 +31,12 @@ body {
     margin-right: auto; /* Auto margin on right */
     max-width: 150px; /* Set maximum width */
     height: auto; /* Automatically adjust height */
+}
+
+.light-orange-rectangle {
+    width: 100%; /* Take up full width */
+    height: 20px; /* Set height */
+    background-color: #f7bc75; /* Set background color */
 }
 
 /* Navbar */
