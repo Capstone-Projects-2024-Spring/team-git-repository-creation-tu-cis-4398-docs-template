@@ -28,7 +28,7 @@ body {
 }
 
 .white-rectangle-container img {
-    margin-right: auto; /* Auto margin on right */
+    margin-left: 20px; /* Add left margin */
     max-width: 150px; /* Set maximum width */
     height: auto; /* Automatically adjust height */
 }
@@ -51,6 +51,7 @@ body {
     display: flex; /* Use flexbox layout */
     flex-direction: column; /* Arrange items vertically */
     max-width: 150px; /* Set maximum width */
+    margin-left: 20px;  /* Add left margin */
 }
 
 .navbar-container ul {
