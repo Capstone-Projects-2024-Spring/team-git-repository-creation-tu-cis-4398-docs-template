@@ -1,5 +1,7 @@
+/* Login & signup container*/
+
 body {
-    background-color: orange; /* Set background color of the body to orange */
+    background-color: #f7bc75; /* Set background color */
 }
 
 .login-container, .signup-container {
@@ -48,7 +50,7 @@ body {
 
 .login-form button, .signup-form button {
     padding: 10px; /* Add padding to buttons */
-    background-color: #f7bc75; /* Set background color of buttons */
+    background-color: orange; /* Set background color of buttons */
     color: #fff; /* Set text color of buttons */
     border: none; /* Remove border from buttons */
     border-radius: 10px; /* Add border radius to buttons */
