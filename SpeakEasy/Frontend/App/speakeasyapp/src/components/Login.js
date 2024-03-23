@@ -28,7 +28,6 @@ const Login = () => {
 
     const navigate = useNavigate(); // Assign the `useNavigate` hook to the variable `navigate`
 
-    // JSX markup for the Login component
     return (
         <div className="login-container"> {/* Container for Login form */}
             <h2>Login</h2> {/* Login heading */}
@@ -51,7 +50,7 @@ const Login = () => {
                         required
                     /> {/* Input field for password */}
                 </div>
-                <button type="submit"onClick={() => navigate('/mainpage')}>Login</button> {/* Submit button */}
+                <button type="submit"onClick={() => navigate('/mainpage')}>Log in</button> {/* Submit button */}
             </form>
             <div> {/* Additional text for navigating to signup page */}
                 <p>Need an account? <Link to="/signup">Sign Up</Link></p> {/* Link to signup page */}
