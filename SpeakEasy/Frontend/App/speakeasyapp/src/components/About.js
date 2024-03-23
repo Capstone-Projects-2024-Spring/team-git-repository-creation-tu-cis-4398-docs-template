@@ -1,7 +1,8 @@
-import React from 'react'; // Import React library
-import './styles/About.css'; // Import custom CSS stylesheet
-import Logo from './assets/Logo.png'; // Import logo image
+import React from 'react'; 
+import './styles/About.css'; 
+import Logo from './assets/Logo.png';
 
+// About component
 const About = () => { 
     return( // JSX markup for About component
         <div className="about-container"> {/* Outer container for About section */}
@@ -18,4 +19,4 @@ const About = () => {
     );
 };
 
-export default About; // Export About component
+export default About; 
