@@ -22,12 +22,8 @@ const steps = [
 
 // Chatbot theme
 const theme = {
-    background: 'orange' // Background color
-};
-
-const theme2= {
     background: '#f7bc75' // Background color
-}
+};
 
 // Chatbot component
 const Bot = () => (
@@ -35,8 +31,8 @@ const Bot = () => (
         steps={steps} // Pass the defined steps
         floating={true} // Enable floating mode
         floatingStyle={theme} // Apply theme to the floating style
-        bubbleStyle={theme2} // Apply theme to the chat bubbles
-        submitButtonStyle={theme2} // Apply theme to the submit button
+        bubbleStyle={theme} // Apply theme to the chat bubbles
+        submitButtonStyle={theme} // Apply theme to the submit button
     />
 );
 
