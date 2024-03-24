@@ -99,6 +99,10 @@ body {
     align-items: center; /* Center align items horizontally */
 }
 
+.profile-orange-square h3, .profile-orange-square h4 {
+    margin-bottom: 0px; /* Add bottom margin */
+}
+
 .profile-orange-square img {
     width: 150px; /* Set the width of the image */
     height: auto; /* Maintain aspect ratio */
@@ -118,8 +122,4 @@ body {
     margin-top: 20px; /* Add top margin */
     width: 50px; /* Set the width of the image */
     height: auto; /* Maintain aspect ratio */
-}
-
-.profile-orange-rectangle h5 {
-    margin-left: 10px; /* Add margin left to create space between image & text */
 }
