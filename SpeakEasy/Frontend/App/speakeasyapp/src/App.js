@@ -7,6 +7,7 @@ import MainPage from './components/MainPage';
 import Bot from './components/Bot';
 import SignupProgression2 from './components/SignupProgression2';
 import SignupProgression3 from './components/SignupProgression3';
+import Profile from './components/Profile';
 
 const App = () => {
     return (
@@ -22,6 +23,8 @@ const App = () => {
                 <Route path="/signupProgression2" element={<AboutWithSignupProgression2 />} />    
                 {/* Route for the SignupProgression3 */}
                 <Route path="/signupProgression3" element={<AboutWithSignupProgression3 />} />   
+                {/* Route for the Profile */}
+                <Route path="/profile" element={<Profile />} /> 
             </Routes>
         </Router>
     );
