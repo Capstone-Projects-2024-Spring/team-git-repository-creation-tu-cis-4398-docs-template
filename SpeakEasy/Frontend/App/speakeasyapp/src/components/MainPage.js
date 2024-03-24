@@ -23,7 +23,7 @@ const MainPage = () => {
                     <ul>
                         <li>
                             <img src={Book} alt="Learn" /> {/* Learn icon */}
-                            <Link to="/">Learn</Link> {/* Learn link */}
+                            <Link to="/mainpage">Learn</Link> {/* Learn link */}
                         </li>
                         <li>
                             <img src={User} alt="Profile" /> {/* Profile icon */}
