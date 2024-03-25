@@ -39,24 +39,52 @@ Discuss what you need to develop this project. This includes background informat
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/ApplebaumIan">
-            <img src="https://avatars.githubusercontent.com/u/9451941?v=4" width="100;" alt="ApplebaumIan"/>
+        <a href="https://github.com/ereizas">
+            <img src="https://avatars.githubusercontent.com/u/71237683?v=4" width="100;" alt="ereizas"/>
             <br />
-            <sub><b>Ian Tyler Applebaum</b></sub>
+            <sub><b>Eric Reizas</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/leekd99">
-            <img src="https://avatars.githubusercontent.com/u/32583417?v=4" width="100;" alt="leekd99"/>
+        <a href="https://github.com/TU-Wenjie-Gao">
+            <img src="https://avatars.githubusercontent.com/u/112009999?s=88&v=4" width="100;" alt="TU-Wenjie-Gao"/>
             <br />
-            <sub><b>Kyle Dragon Lee</b></sub>
+            <sub><b>Wenjie Gao</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/thanhnguyen46">
-            <img src="https://avatars.githubusercontent.com/u/60533187?v=4" width="100;" alt="thanhnguyen46"/>
+        <a href="https://github.com/Dem0nMaxwell">
+            <img src="https://avatars.githubusercontent.com/u/112010069?s=88&v=4" width="100;" alt="Dem0nMaxwell"/>
             <br />
-            <sub><b>Thanh Nguyen</b></sub>
+            <sub><b>Wenjie Chen</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/JasonC136">
+            <img src="https://avatars.githubusercontent.com/u/112498586?s=88&v=4" width="100;" alt="JasonC136"/>
+            <br />
+            <sub><b>Jason Chen</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/tun79877">
+            <img src="https://avatars.githubusercontent.com/u/114621735?s=88&v=4" width="100;" alt="tun79877"/>
+            <br />
+            <sub><b>Xianjun Hu</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/jimmy70111">
+            <img src="https://avatars.githubusercontent.com/u/123014046?s=88&v=4" width="100;" alt="jimmy70111"/>
+            <br />
+            <sub><b>Jimmy Jiang</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/tuk04440">
+            <img src="https://avatars.githubusercontent.com/u/123014730?s=88&v=4" width="100;" alt="tuk04440"/>
+            <br />
+            <sub><b>Allen Abraham</b></sub>
         </a>
     </td>
    </tr>
