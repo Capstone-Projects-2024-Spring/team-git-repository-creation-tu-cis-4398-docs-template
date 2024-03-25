@@ -46,7 +46,7 @@ document.body.appendChild(userInput);
  function characterValidation() {
 
     // split into array of chars
-    const paragraphText = initialParagraph.split('').map((char, i) => {
+    const paragraphText = database.split('').map((char, i) => {
 
     // If the index of the character is less than the current index of the user's input
     // set as the wrap char as correct 
@@ -68,7 +68,25 @@ document.body.appendChild(userInput);
   }
 
 
+// Listen for input events for real time data and input 
 
+userInput.addEventListener('input', function() {
+    const inputText = this.value;
+    const paragraphText = database.substring(0, inputText.length);
+  
+    if (inputText === paragraphText) {
+      // Check if the input matches the corresponding portion of the paragraph
+      this.classList.remove('incorrect');
+      this.classList.add('correct');
+      index = inputText.length;
+
+      characterValidation();
+
+    } else {
+      this.classList.remove('correct');
+      this.classList.add('incorrect');
+    }
+  });
 
 
 
