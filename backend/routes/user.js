@@ -10,7 +10,6 @@ router.route('/register').post(async (req, res) => {
       // Extract user data from request body
       const { username, email, password } = req.body;
   
-  
       // Check for existing user with same email
       const existingUser = await User.findOne({ email });
       if (existingUser) {
@@ -36,9 +35,32 @@ router.route('/register').post(async (req, res) => {
       console.error(err);
       res.status(500).json('Error: ' + err.message); // Handle errors gracefully
     }
-  });
+});
   
-//Login Route
+// Login route
+router.route('/login').post(async (req, res) => {
+  try {
+    const { email, password } = req.body; // use email to login? can change to username instead.
 
+    const thisUser = await User.findOne({email})
+
+    if (!thisUser) {
+      return res.status(400).json({ message: 'Unable to login: invalid credentials.' });
+    }
+
+    const passwordMatch = await bcrypt.compare(password, thisUser.password);
+
+    if (!passwordMatch) {
+      return res.status(400).json({ message: 'Invalid credentials' });
+    }
+
+    const token = jwt.sign({ userId: thisUser._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+    res.json({ message: 'Successfully logged in.', token, user: { _id: thisUser._id, username: thisUser.username, email: thisUser.email } });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json('Error: ' + err.message);
+  }
+});
 
 module.exports = router;
