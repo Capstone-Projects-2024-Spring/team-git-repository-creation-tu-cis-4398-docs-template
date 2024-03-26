@@ -7,8 +7,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
-node_modules
 
 # env
-backend/.env
+.env
+
+#node 
+node_modules
 
